@@ -1,0 +1,13 @@
+.address{
+    font-size: 24rpx;
+    border-bottom: 1rpx #969696 solid;
+    padding: 10rpx 0 5rpx 0;
+}
+.school_name{
+    padding: 10rpx 0 5rpx 0;
+}
+.school{
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+

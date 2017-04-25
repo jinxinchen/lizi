@@ -1,0 +1,12 @@
+<!--pages/publish/publish.wxml-->
+<view class="choose_type">
+    <navigator url="../club_creat_step/club_creat_step" class="image">
+        <image src="{{creatclub}}" mode="widthFix" style="width: 120rpx;"></image>
+        <view class="text">创建社团</view>
+    </navigator>
+
+    <navigator url="../club_manage__publishactivity/club_manage__publishactivity" class="image">
+        <image src="{{createvent}}" mode="widthFix" style="width: 120rpx;"></image>
+        <view class="text">创建社团活动</view>
+    </navigator>
+</view>

@@ -1,0 +1,8 @@
+<view class="all_container">
+<view class="school" wx:for="{{info}}">
+  <view bindtap="back" data-add="{{item.school_name}}" >
+    <view class="school_name">{{item.school_name}}</view>
+    <view class="address">{{item.address}}</view>
+  </view>
+</view>
+</view>

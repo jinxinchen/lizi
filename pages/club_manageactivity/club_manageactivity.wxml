@@ -1,0 +1,65 @@
+<view class="all_container">
+
+<view class="back_all">
+
+  <!--title-->
+  <!--<view class="title">
+    <view class="return" bindtap="return">
+      <image src="{{back}}" mode="widthFix" style="width:60rpx"></image>
+    </view>
+    <view class="manage_club">管理社团活动</view>
+  </view>-->
+
+  <!--middle-->
+  <scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">
+    <view wx:for="{{hotact}}" class="white">
+      <view class="all">
+        <image class="background" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+        <view class="img_padding">
+          <view class="img_marign">
+            <image src="http://wxapp1.b0.upaiyun.com/yzl/img/edit.png" mode="widthFix" style="width:50rpx"></image>
+          </view>
+          <view class="img_marign">
+            <image bindtap="deletes" id="{{index}}" src="http://wxapp1.b0.upaiyun.com/yzl/img/delete.png" mode="widthFix" style="width:50rpx"></image>
+          </view>
+          <view class="img_marign">
+            <image src="http://wxapp1.b0.upaiyun.com/yzl/img/user.png" mode="widthFix" style="width:50rpx"></image>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="create">
+          <view class="create_">{{item.name}}</view>
+          <view class="find">查看活动详情页</view>
+        </view>
+        <view class="kind_mes">
+          <view class="display">
+            <view class="img_mar" >
+              <image  src="http://wxapp1.b0.upaiyun.com/yzl/img/time.png" mode="widthFix" style="width:35rpx"></image>
+            </view>
+            <view class="font">{{item.act_starting}}
+            </view>
+          </view>
+          <view class="display">
+            <view class="img_mar">
+              <image src="http://wxapp1.b0.upaiyun.com/yzl/img/location.png" mode="widthFix" style="width:35rpx"></image>
+            </view>
+            <view class="font">{{item.address}}
+            </view>
+          </view>
+          <view class="display">
+            <view class="img_mar">
+              <image src="http://wxapp1.b0.upaiyun.com/yzl/img/mes.png" mode="widthFix" style="width:35rpx"></image>
+            </view>
+            <view class="font">{{item.requirements}}
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
+</view>
+
+
+</view>

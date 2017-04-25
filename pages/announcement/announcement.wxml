@@ -1,0 +1,8 @@
+<view class="page_head">
+<view class="head1">编辑社团公告</view>
+<view class="head2" bindtap="set">完成</view>
+</view>
+<view class="line"></view>
+<input bindinput="inputnews" placeholder="正文（必填，15-500字）"/>
+<view class="line"></view>>
+<input />

@@ -1,0 +1,20 @@
+/* pages/ground/ground.wxss */
+.user{
+  display: -webkit-flex;
+  height: 140rpx;
+  line-height: 100rpx;
+  padding-top: 10rpx;
+  border-bottom: 3rpx solid #ccc;
+}
+.checkbox{
+  flex: 1;
+}
+.image{
+  flex: 2;
+  width: 100rpx;
+  height: 100rpx;
+  border: 3rpx solid orange;
+}
+.name{
+  flex:6;
+}

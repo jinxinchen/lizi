@@ -1,0 +1,238 @@
+/* pages/function/function.wxss */
+/*滑块*/
+.swiper-tab {
+  height: 80rpx;
+  background: orange;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  display: -webkit-flex;
+}
+.swiper-tab-list {
+  flex: 3;
+  text-align: center;
+  display: inline-block;
+  width: 20%;
+  color: white;
+}
+.swiper-tab-list1 {
+  flex: 1;
+  text-align: center;
+  display: inline-block;
+  width: 20%;
+  color: white;
+}
+.swiper-tab-list1 image{
+    text-align: center;
+    margin-top: 10rpx;
+}
+.on {
+  color: white;
+  border-bottom: 5rpx solid white;
+}
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*内容*/
+.body text{
+    padding-left:10rpx;
+}
+.line{
+    width: 1080rpx;
+    height: 3rpx;
+    background: grey;
+}
+.mark{
+    display: -webkit-flex;
+    direction: column;
+    padding-top: 30rpx;
+}
+.column{
+    flex: 1;
+    width: 10rpx;
+    height: 50rpx;
+    padding-left: 20rpx;
+    padding-top: 5rpx;
+}
+.text{
+    flex: 28;
+    text-align: left;
+    padding-left:10rpx;
+}
+
+.choice{
+    height: 180rpx;
+    display:-webkit-flex;
+}
+.choice view{
+    width: 140rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+}
+.one{
+    flex: 1;   
+}
+.style{
+    color: orange;
+    border-radius: 30rpx;
+    border: 3rpx solid orange;
+}
+.stylex{
+    color: white;
+    background: orange;
+    border-radius: 30rpx;
+    border: 3rpx solid orange;
+}
+.recommendation{
+    padding-top: 20rpx;
+    display:-webkit-flex;
+    flex-direction: column;
+}
+.option{
+    width: 710rpx;
+    border: 3rpx solid orange;
+    border-radius: 10rpx;
+    margin-left: 20rpx;
+    margin-bottom: 20rpx;
+    flex: 1;
+    display: -webkit-flex;
+}
+.headimage{
+    flex: 1;
+    text-align: center;
+    padding-top:15rpx;
+}
+.headimage image{
+    width: 130rpx;
+    height: 130rpx;
+    border: 3rpx solid orange;
+    border-radius: 50%;
+}
+.name{
+    flex: 2;
+}
+.introduction{
+    flex: 1;
+}
+.clubname{
+    text-align: left;
+    padding-top: 40rpx;
+}
+.people{
+    display: -webkit-flex;
+    padding-top: 10rpx;
+}
+.peopleimage{
+    flex: 1;
+}
+.number{
+    flex: 4;
+    font-size: 24rpx;
+    color: grey;
+    padding-top: 5rpx;
+}
+.introduction image{
+    float: right;
+    padding-top: 50rpx;
+}
+
+/* pages/club_manageactivity/club_manageactivity.wxss */
+
+.title {
+  height: 90rpx;
+  background: white;
+  display: inline-flex;
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+.white{
+    background: white;
+    margin-top:10rpx;
+    margin-bottom: 10rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-top: 10rpx;
+}
+
+.return {
+  padding-top: 15rpx;
+}
+
+.manage_club {
+  padding-top: 20rpx;
+  color: orange;
+}
+
+.background {
+  /*background-image: url({{http://wxapp1.b0.upaiyun.com/ljq/img/demo.jpg}});*/
+  width: 100%;
+  height: 400rpx;
+  /*margin-top: 20rpx;*/
+  
+}
+.small_img{
+    color: white;
+}
+.img_padding{
+    padding-top: 20rpx;
+    display: inline-flex;
+    margin-left: 570rpx;
+}
+.create{
+    display: -webkit-flex;
+    direction: column;
+    margin-top: 20rpx;
+}
+.create_{
+    flex: 1;
+    margin-left: 10rpx;
+}
+.find{
+    flex: 1;
+    text-align: right;
+    font-size: 24rpx;
+    color: #ffbf2c;
+    text-decoration: underline;
+}
+.img_marign{
+    margin-right: 10rpx;
+}
+.display{
+    display: inline-flex;
+    width: 100%;
+    line-height: 50rpx;
+}
+
+.img_mar{
+    margin-right: 30rpx;
+}
+.kind_mes{
+    margin-top: 25rpx;
+    margin-left: 10rpx;
+}
+.font{
+    font-size: 24rpx;
+    line-height: 40rpx;
+
+}
+.all{
+    /*margin-top: 20rpx;*/
+    margin-bottom: 10rpx;
+    background-color: white;
+}
+.back_all{
+    height: 30rpx;
+    width: 100%;
+    background-color:rgb(238, 238, 238);
+}
+.margin_view{
+    margin-top: 20rpx;
+}

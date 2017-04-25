@@ -1,0 +1,77 @@
+<view class="all_container">
+
+  <!--<view class="top">
+    <image src="{{back}}" id="img1" bindtap="return"></image>
+    <view class="contain1">我的社团</view>
+  </view>-->
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">我的管理</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">我的加入</view>
+  </view>
+
+  <!--内容-->
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <swiper-item>
+      <scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">
+        <view wx:for="{{all}}">
+          <view wx:if="{{item.id}}">
+            <navigator url="../club_manage/club_manage?club_id={{item.id}}&club_name={{item.name}}">
+              <view class="option">
+                <view class="headimage">
+                  <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+                </view>
+                <view class="name">
+                  <view class="clubname">{{item.name}}</view>
+                  <view class="people">
+                    <view class="peopleimage">
+                      <image src="{{people}}" mode="widthFix" style="width: 30rpx"></image>
+                    </view>
+                    <view class="number">{{item.member_num}}人 已加入</view>
+                  </view>
+                </view>
+                <view class="introduction">
+                  <image src="{{more}}" mode="widthFix" style="width: 60rpx"></image>
+                </view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+        <view class="create">
+          <view class="a">还没有社团？</view>
+          <navigator url="../club_creat_step/club_creat_step" class="b">创建一个社团</navigator>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">
+        <view wx:for="{{joinClub}}">
+          <view wx:if="{{item.id}}">
+            <navigator url="../club_message/club_message?club_id={{item.id}}">
+              <view class="option">
+                <view class="headimage">
+                  <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+                </view>
+                <view class="name">
+                  <view class="clubname">{{item.name}}</view>
+                  <view class="people">
+                    <view class="peopleimage">
+                      <image src="{{people}}" mode="widthFix" style="width: 30rpx"></image>
+                    </view>
+                    <view class="number">{{item.member_num}}人 已加入</view>
+                  </view>
+                </view>
+                <view class="introduction">
+                  <image src="{{more}}" mode="widthFix" style="width: 60rpx"></image>
+                </view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+        <view class="create">
+          <view class="a">还没有社团？</view>
+          <navigator url="../club_creat_step/club_creat_step" class="b">创建一个社团</navigator>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

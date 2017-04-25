@@ -1,0 +1,99 @@
+<view class="all_container">
+  <!--<view class="head">
+    <image src="{{back}}" id="img1" bindtap="return"></image>
+    <view class="contain1">社团记忆</view>
+  </view>-->
+
+  <!-- 顶部 -->
+  <view class="top_image">
+    <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/22_function_club/topCircle.png"></image>
+  </view>
+
+  <!-- for -->
+  <view wx:for="{{data_record}}" wx:if="{{item.id}}">
+
+    <!-- 左图右字 -->
+    <view wx:if="{{index % 2 == 0}}" class="left">
+
+      <!--图-->
+      <view class="left_1">
+        <view class="left_1_1"></view>
+        <navigator url="../recall_info/recall_info?recall_id={{item.id}}&club_id={{item.club_id}}">
+          <image class="left_1_2 show_img" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+        </navigator>
+        <view class="left_1_3">
+          <view class="left_1_3_1"></view>
+        </view>
+      </view>
+
+      <!--字-->
+      <view class="left_2">
+
+        <!--<view>{{item.intro}}</view>
+        <view>{{item.time}}</view>
+        <view>{{item.topic}}</view>-->
+        <view class="left_2_01" wx:if="{{index-1 > 0}}">{{data_record[index-1].topic}}</view>
+        <view class="left_2_02" wx:if="{{index-1 > 0}}">{{data_record[index-1].time}}</view>
+        <view class="left_2_03" wx:if="{{index-1 > 0}}">{{data_record[index-1].intro}}</view>
+      </view>
+    </view>
+
+    <!-- 左字右图 -->
+    <view wx:if="{{index % 2 == 1}}" class="right">
+
+      <!-- 字 -->
+      <view class="right_1">
+        <view class="right_1_01" wx:if="{{index-1 > -1}}">{{data_record[index-1].topic}}</view>
+        <view class="right_1_02" wx:if="{{index-1 > -1}}">{{data_record[index-1].time}}</view>
+        <view class="right_1_03" wx:if="{{index-1 > -1}}">{{data_record[index-1].intro}}</view>
+      </view>
+
+      <!-- 图 -->
+      <view class="right_2">
+        <view class="right_2_1">
+          <view class="right_2_1_1"></view>
+        </view>
+        <navigator url="../recall_info/recall_info?recall_id={{item.id}}&club_id={{item.club_id}}">
+          <image class="right_2_2 show_img" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+        </navigator>
+        <view class="right_2_3"></view>
+      </view>
+    </view>
+
+    <!-- end -->
+  </view>
+
+  <!-- end for -->
+
+  <!-- 左图右字 -->
+  <view wx:if="{{data_record.length % 2 == 0}}" class="left">
+
+    <!--图-->
+    <view class="left_1">
+      <view></view>
+    </view>
+
+    <!--字-->
+    <view class="left_2">
+      <view class="left_2_01">{{data_record[data_record.length-1].topic}}</view>
+      <view class="left_2_02">{{data_record[data_record.length-1].time}}</view>
+      <view class="left_2_03">{{data_record[data_record.length-1].intro}}</view>
+    </view>
+  </view>
+
+  <!-- 左字右图 -->
+  <view wx:if="{{data_record.length % 2 == 1}}" class="right">
+
+    <!-- 字 -->
+    <view class="right_1">
+      <view class="right_1_01">{{data_record[data_record.length-1].topic}}</view>
+      <view class="right_1_02">{{data_record[data_record.length-1].time}}</view>
+      <view class="right_1_03">{{data_record[data_record.length-1].intro}}</view>
+    </view>
+
+    <!-- 图 -->
+    <view class="right_2">
+      <view></view>
+    </view>
+  </view>
+</view>

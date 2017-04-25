@@ -1,0 +1,67 @@
+<view class="all_container">
+  
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item display="inline">
+          <image class="image" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="title">
+    <view class="return" bindtap="return">
+      <image src="{{hotclub}}" mode="widthFix" style="width:60rpx"></image>
+    </view>
+    <view class="manage_club">热门社团活动</view>
+  </view>
+
+  <!--middle-->
+
+  <!--<scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">-->
+  <view wx:for="{{hotact}}" wx:if="{{item.user_id}}">
+
+    <!--<block wx:if="{{item.area}}">-->
+    <navigator url="../club_manageactivity_concret/club_manageactivity_concret?id={{item.id}}&name={{item.name}}">
+      <view class="white">
+        <view class="all">
+          <image class="background" mode="aspectFill" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+        </view>
+        <view>
+          <view class="create">
+            <view class="create_">{{item.name}}</view>
+
+            <!--<view class="find">查看活动详情页</view>-->
+          </view>
+          <view class="kind_mes">
+            <view class="display">
+              <view class="img_mar">
+                <image src="http://wxapp1.b0.upaiyun.com/yzl/img/time.png" mode="widthFix" style="width:35rpx"></image>
+              </view>
+              <view class="font">{{item.act_starting}}
+              </view>
+            </view>
+            <view class="display">
+              <view class="img_mar">
+                <image src="http://wxapp1.b0.upaiyun.com/yzl/img/location.png" mode="widthFix" style="width:35rpx"></image>
+              </view>
+              <view class="font">{{item.address}}
+              </view>
+            </view>
+            <view class="display">
+              <view class="img_mar">
+                <image src="http://wxapp1.b0.upaiyun.com/yzl/img/mes.png" mode="widthFix" style="width:35rpx"></image>
+              </view>
+              <view class="font">{{item.intro}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="back_all"></view>
+
+      <!--</block>-->
+    </navigator>
+  </view>
+
+  <!--</scroll-view>-->
+</view>

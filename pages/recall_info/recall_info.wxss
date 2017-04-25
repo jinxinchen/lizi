@@ -1,0 +1,109 @@
+/* pages/club/recall_edit/recall_edit.wxss */
+
+.userinfo {
+  /*padding: 200rpx;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*height: 400rpx;*/
+  margin-top: 30rpx;
+}
+
+.userinfo-avatar {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  border-radius: 50%;
+  border: 1rpx double orange; 
+  /*border-color: #bfbfbf;*/
+}
+.img1{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 18rpx;
+}
+
+.top{
+  width: 100%;
+  height: 90rpx;
+  background-color: orange;
+  display: -webkit-flex;
+
+}
+.contain0{
+   flex: 1;
+}
+.contain1{
+  flex:4;
+  text-align: center;
+  margin-top: 17rpx;
+  color: white;
+}
+.contain2{
+  flex: 1;
+  margin-top: 25rpx;
+  color: white;
+  font-size: 0.8em;
+   text-align: center;
+}
+.tiltle{
+  width: 60%;
+  margin: 20rpx auto;
+  display: flex;
+  direction: columen;
+ height: 80rpx;
+
+}
+.times{
+  margin-top: -20rpx;
+  margin-left: 15rpx;
+}
+.input{
+  border-bottom: 4rpx orange solid;
+}
+.inputs{
+  text-align: center;
+}
+.bds{
+  height: 90rpx;
+  width: 400rpx;
+  border-bottom: 4rpx orange solid;
+  color: grey;
+  line-height: 90rpx;
+}
+.textarea{
+  width: 90%;
+  height: 200rpx;
+  margin: 3rpx auto;
+  font-size: 26rpx;
+  color: grey;
+}
+.left-side{
+  width: 200rpx;
+  height: 50rpx;
+  margin-left:20rpx;
+  font-size: 0.9em;
+  border-left: 10rpx orange solid;
+  display: -webkit-flex;
+}
+.left{
+  margin-left:10rpx;
+}
+.activity{
+    padding-left: 10rpx;
+    padding-right:10rpx;
+    display: -webkit-flex;
+    text-align: center;
+}
+.miniposter{
+    flex: 1;
+    /*display: -webkit-flex;*/
+    direction: column;
+    text-align :left;
+}
+.miniposter image{
+    flex:1;
+    width: 220rpx;
+    height: 300rpx;
+    margin-left:20rpx;
+}

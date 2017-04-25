@@ -1,0 +1,116 @@
+/* pages/mine/mine.wxss */
+.top {
+  background-color: orange;
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /*display:flex表示弹性布局*/
+}
+
+.contain1 {
+  padding-top: 16rpx;
+  padding-left: 245rpx;
+  color: white;
+}
+
+.contain2 {
+  padding-top: 30rpx;
+  padding-left: 136px;
+}
+
+#img1 {
+  height: 60rpx;
+  width: 60rpx;
+  padding-top: 14rpx;
+}
+
+
+#head_img {
+  border-radius: 50%;
+  height: 100rpx;
+  width: 100rpx;
+   margin:19rpx 25rpx;
+}
+
+/*滑块*/
+.swiper-tab {
+  height: 95rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  display: -webkit-flex;
+}
+.swiper-tab-list {
+  flex: 1;
+  text-align: center;
+  border-bottom: 2rpx solid #ccc;
+  display: inline-block;
+  width: 20%;
+}
+.on {
+  border-bottom: 5rpx solid orange;
+}
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*内容*/
+.option{
+    width: 710rpx;
+    border: 3rpx solid orange;
+    border-radius: 10rpx;
+    margin-left: 20rpx;
+    margin-bottom: 20rpx;
+    margin-top:10rpx;
+    flex: 1;
+    display: -webkit-flex;
+}
+.headimage{
+    flex: 1;
+    text-align: center;
+    padding-top:15rpx;
+}
+.headimage image{
+    width: 130rpx;
+    height: 130rpx;
+    border: 3rpx solid orange;
+    border-radius: 50%;
+}
+.name{
+    flex: 2;
+}
+.introduction{
+    flex: 1;
+}
+.clubname{
+    text-align: left;
+    padding-top: 40rpx;
+}
+.people{
+    display: -webkit-flex;
+    padding-top: 10rpx;
+}
+.peopleimage{
+    flex: 1;
+}
+.number{
+    flex: 4;
+    font-size: 24rpx;
+    color: grey;
+    padding-top: 5rpx;
+}
+.introduction image{
+    float: right;
+    padding-top: 50rpx;
+}
+.create{
+    font-size: 24rpx;
+    text-align: center;
+}
+.b{
+    color: orange;  
+}

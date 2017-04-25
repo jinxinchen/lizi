@@ -1,0 +1,19 @@
+<view class="all_container">
+
+<view class="page-header">
+  <image class="club-logo" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{image}}"></image>
+  <image class="club-logo1" src="http://wxapp1.b0.upaiyun.com/ljq/img/club/people/TouXiang_22club.png" bindtap="change_image"></image>
+</view>
+<view>
+  <view>社团名称</view>
+  <input bindinput="inputname" value="{{name}}" />
+  <view>社团简介</view>
+  <input bindinput="inputintro" value="{{intro}}" />
+  <view>社团所在</view>
+  <input bindinput="inputschool" value="{{school_id}}" />
+  <view>社团所属</view>
+  <input bindinput="inputtag" value="{{tag_id}}" />
+</view>
+<button bindtap="Set">保存</button>
+
+</view>

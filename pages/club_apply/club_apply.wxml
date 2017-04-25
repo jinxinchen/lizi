@@ -1,0 +1,28 @@
+<view class="all_container">
+  <!--<view class="top">
+    <image src="{{back}}" id="img1" bindtap="return"></image>
+    <view class="contain1" style="text-align:center">申请入社</view>
+  </view>-->
+  <view wx:if="{{all.num==0}}">
+    <view style="text-align:center">
+      <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img.lizi123.cn/Uploads/2016-09-25/1474780687_434262.jpg" mode="widthFix" style="width:200rpx"></image>
+    </view>
+    <view style="text-align:center">暂无成员申请</view>
+  </view>
+  <view wx:else>
+    <scroll-view style="height: {{scrollHeight}}px; " scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad" bindscroll="scroll">
+      <view wx:for="{{all}}">
+        <view class="row" wx:if="{{item.club_id}}">
+          <view class="headimg">
+            <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.member_info.head_image}}" id="head_img"></image>
+          </view>
+          <view class="column">
+            <text class="name">{{item.member_info.user_name}}</text>
+            <text class="style">申请加入 {{club_name}}</text>
+          </view>
+          <text data-userid="{{item.user_id}}" bindtap="check" class="check">{{check}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

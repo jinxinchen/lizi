@@ -1,0 +1,31 @@
+<view class="all_container">
+
+<view>
+  <view class="titleBar">
+    <view class="return" bindtap="return">
+        <image src="{{back}}" mode="widthFix" style="width:60rpx"></image>
+    </view>
+    <view class="mid">发布秀秀</view>
+    <view class="right">提交</view>
+  </view>
+
+  <textarea  class="message" placeholder="展示你的独特之处"/>
+
+<view class="add" bindtap="show">
+      <view wx:for="{{src}}" class="mut_image">
+      <image src="{{item}}" class="add_img" ></image>
+      </view>
+</view>
+
+</view>
+
+
+<view class="float" wx:if="{{view}}" bindtap="cancel">
+  <view class="alert">
+    <view class="camera" bindtap="camera">拍照</view>
+    <view class="camera" bindtap="choose_from">从手机相册选择</view>
+    <view class="camera" bindtap="cancel">取消</view>
+  </view>
+</view>
+
+</view>

@@ -1,0 +1,118 @@
+/* pages/club_manageactivity/club_manageactivity.wxss */
+
+.title {
+  height: 80rpx;
+  background-color: orange;
+  display: inline-flex;
+  width: 100%;
+}
+.white{
+    background: white;
+    margin-bottom: 30rpx;
+}
+.return {
+  padding-top: 15rpx;
+}
+
+.manage_club {
+  padding-top: 20rpx;
+  color: white;
+}
+
+.background {
+  /*background-image: url({{http://wxapp1.b0.upaiyun.com/ljq/img/demo.jpg}});*/
+  width: 100%;
+  height: 400rpx;
+  /*margin-top: 20rpx;*/
+  
+}
+.small_img{
+    color: white;
+}
+.img_padding{
+    padding-top: 20rpx;
+    display: inline-flex;
+    margin-left: 570rpx;
+}
+.create{
+    display: -webkit-flex;
+    direction: column;
+    margin-top: 20rpx;
+}
+.create_{
+    flex: 1;
+    font-size: 30rpx;
+    margin-left: 10rpx;
+}
+.find{
+    flex: 1;
+    text-align: right;
+    font-size: 24rpx;
+    color: orange;
+    text-decoration: underline;
+}
+.img_marign{
+    margin-right: 10rpx;
+}
+.display{
+    display: inline-flex;
+    height: 70rpx;
+    width: 100%;
+}
+.img_mar{
+    margin-right: 30rpx;
+}
+.kind_mes{
+    margin-top: 25rpx;
+    margin-left: 10rpx;
+}
+.font{
+    font-size: 25rpx;
+    line-height: 40rpx;
+
+}
+.all{
+    /*margin-top: 20rpx;*/
+    margin-bottom: 10rpx;
+    background-color: white;
+}
+.back_all{
+    height: 30rpx;
+    width: 100%;
+    background-color:rgb(238, 238, 238);
+}
+
+
+.top {
+  background-color: orange;
+  height: 80rpx;
+  display: flex;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.contain1 {
+  flex: 1;
+  color: white;
+  padding-top: 10rpx;
+}
+.contain2 {
+  flex: 1.4;
+  color: white;
+  text-align: left;
+  font-size: 24rpx;
+}
+.contain3 {
+  flex: 6;
+  color: white;
+}
+.swiper {
+  display: block;
+  height: 150px;
+}
+
+.image {
+  display: inline;
+  overflow: hidden;
+}

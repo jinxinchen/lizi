@@ -1,0 +1,10 @@
+<!--<button bindtap="userinfo">我的粉丝</button>
+
+<view class="user" wx:for="{{userInfo}}">
+    <view class="checkbox"><checkbox></checkbox></view>
+    <view class="image">
+    <image src="{{item.user_info.head_image}}" mode="widthFix" style="width: 100rpx;"></image>
+    </view>
+    <view class="name">{{item.user_info.user_name}}</view>
+    <button plain="true" size="mini" style="height: 70rpx;">关注</button>
+</view>-->

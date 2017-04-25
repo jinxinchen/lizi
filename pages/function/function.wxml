@@ -1,0 +1,139 @@
+<!--滑块-->
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+    <image src="{{message}}" mode="widthFix" style="width: 50rpx"></image>
+    </view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">活动</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">社团</view>  
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">课程</view>
+    <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">
+    <image src="{{search}}" mode="widthFix" style="width: 50rpx"></image>
+    </view>  
+</view> 
+
+<!--内容-->
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+
+<swiper-item>信件</swiper-item> 
+<swiper-item>活动</swiper-item> 
+
+<swiper-item>  
+
+    <image src="{{column}}" class="column"></image>
+    <text>标签分类</text>
+    <image src="{{pen}}" class="pen" ></image>
+
+    <view class="choice">
+        <view class="one">
+            <view class="style" bindtap="show1" wx:if="{{bol1}}">学术科技</view>
+            <view class="stylex" bindtap="show1" wx:if="{{!bol1}}">学术科技</view>
+            <view class="style" bindtap="show2" wx:if="{{bol2}}">志愿服务</view>
+            <view class="stylex" bindtap="show2" wx:if="{{!bol2}}">志愿服务</view>
+        </view>
+        <view class="one">
+            <view class="style" bindtap="show3" wx:if="{{bol3}}">社会实践</view>
+            <view class="stylex" bindtap="show3" wx:if="{{!bol3}}">社会实践</view>
+            <view class="style" bindtap="show4" wx:if="{{bol4}}">学生组织</view>
+            <view class="stylex" bindtap="show4" wx:if="{{!bol4}}">学生组织</view>
+        </view>
+        <view class="one">
+            <view class="style" bindtap="show5" wx:if="{{bol5}}">文化艺术</view>
+            <view class="stylex" bindtap="show5" wx:if="{{!bol5}}">文化艺术</view>
+            <view class="style" bindtap="show6" wx:if="{{bol6}}">体育娱乐</view>
+            <view class="stylex" bindtap="show6" wx:if="{{!bol6}}">体育娱乐</view>
+        </view>
+    </view>
+
+    <image src="{{column}}" class="column"></image>
+    <text>热门推荐</text>
+
+    <view class="recommendation" wx:if="{{!bol1}}">
+    <navigator url="../club_manage/club_manage">
+        <view class="option">
+            <view class="headimage">
+                <image src="{{head}}" mode="widthFix" style="width: 140rpx"></image>
+            </view>
+
+            <view class="name">
+                <view class="clubname">栗子社</view>
+                <view class="people">
+                    <view class="peopleimage"><image src="{{people}}" mode="widthFix" style="width: 30rpx"></image></view>
+                    <view class="number">20人 已加入</view>
+                </view>
+            </view>
+
+            <view class="introduction">
+                <image src="{{more}}" mode="widthFix" style="width: 60rpx"></image>
+            </view>
+        </view>
+    </navigator>
+
+    <navigator url="../club_manage/club_manage">
+        <view class="option">
+            <view class="headimage">
+                <image src="{{head}}" mode="widthFix" style="width: 140rpx"></image>
+            </view>
+
+            <view class="name">
+                <view class="clubname">栗子社</view>
+                <view class="people">
+                    <view class="peopleimage"><image src="{{people}}" mode="widthFix" style="width: 30rpx"></image></view>
+                    <view class="number">20人 已加入</view>
+                </view>
+            </view>
+
+            <view class="introduction">
+                <image src="{{more}}" mode="widthFix" style="width: 60rpx"></image>
+            </view>
+        </view>
+    </navigator>
+
+    </view>
+
+    <view class="recommendation" wx:if="{{!bol5}}">
+    <navigator url="../club_manage/club_manage">
+        <view class="option">
+            <view class="headimage">
+                <image src="{{head}}" mode="widthFix" style="width: 140rpx"></image>
+            </view>
+
+            <view class="name">
+                <view class="clubname">影艺协会</view>
+                <view class="people">
+                    <view class="peopleimage"><image src="{{people}}" mode="widthFix" style="width: 30rpx"></image></view>
+                    <view class="number">20人 已加入</view>
+                </view>
+            </view>
+
+            <view class="introduction">
+                <image src="{{more}}" mode="widthFix" style="width: 60rpx"></image>
+            </view>
+        </view>
+    </navigator>
+
+    <navigator url="../club_manage/club_manage">
+        <view class="option">
+            <view class="headimage">
+                <image src="{{head}}" mode="widthFix" style="width: 140rpx"></image>
+            </view>
+
+            <view class="name">
+                <view class="clubname">影艺协会</view>
+                <view class="people">
+                    <view class="peopleimage"><image src="{{people}}" mode="widthFix" style="width: 30rpx"></image></view>
+                    <view class="number">20人 已加入</view>
+                </view>
+            </view>
+
+            <view class="introduction">
+                <image src="{{more}}" mode="widthFix" style="width: 60rpx"></image>
+            </view>
+        </view>
+    </navigator>
+    </view>
+</swiper-item>  
+
+<swiper-item>课程</swiper-item>
+<swiper-item>搜索</swiper-item>
+
+</swiper> 

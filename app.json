@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/club_editmessage/club_editmessage",
+    "pages/club_manage/club_manage",
+    "pages/club_message/club_message",
+    "pages/club_announcement/club_announcement",
+    "pages/club_manage__publishactivity/club_manage__publishactivity",
+    "pages/club_apply/club_apply",
+    "pages/recall_edit/recall_edit",
+    "pages/recall_show/recall_show",
+    "pages/recall_info/recall_info",
+    "pages/club_manageactivity/club_manageactivity",
+    "pages/club_manageactivity_concret/club_manageactivity_concret",
+    "pages/club_join_manage/club_join_manage",
+    "pages/activity/activity",
+    "pages/announcement/announcement",
+    "pages/club/club",
+    "pages/club_creat_step/club_creat_step",
+    "pages/club_creat_step2/club_creat_step2",
+    "pages/club_creatshow/club_creatshow",
+    "pages/mine/mine",
+    "pages/getlocation/getlocation",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#FFA500",
+    "navigationBarTitleText": "栗子校园",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "grey",
+    "selectedColor": "#FFA500",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "img/home_selected.png"
+      },
+      {
+        "pagePath": "pages/club/club",
+        "text": "社团",
+        "iconPath": "img/function.png",
+        "selectedIconPath": "img/function_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "img/mine.png",
+        "selectedIconPath": "img/mine_selected.png"
+      }
+    ]
+  }
+}

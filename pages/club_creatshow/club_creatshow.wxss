@@ -1,0 +1,76 @@
+.titleBar{
+    background-color: orange;
+    height: 90rpx;
+    width: 100%;
+    display: -webkit-flex;
+    direction: column;
+}
+.return{
+    width: 60rpx;
+    margin-top:10rpx;
+    flex: 1;
+}
+.mid{
+ 
+    text-align: center;
+    line-height: 90rpx;
+    font-weight:900;
+    color: white;
+    width:100%; 
+    height: 100%;
+    flex:4;
+}
+.right{
+   text-align: center;
+line-height: 90rpx;
+    height: 100%;
+    width: 40%;
+    color: white;
+    font-size: 30rpx;
+    flex:1;
+}
+.message{
+    background-color:white;
+    height: 200px;
+    width: 100%;
+    border: 2rpx silver solid;
+}
+.holder{
+    
+    border: 1px solid red;
+}
+.add{
+    height: 80px;
+    padding-top: 10rpx;
+    padding-left: 10rpx;
+}
+.add_img{
+    width: 130rpx;
+    height: 130rpx;
+    margin-left:10rpx;
+    border: 3rpx solid 	#C0C0C0;
+}
+.mut_image{
+
+    display: inline-flex;
+}
+.float{
+    background-color:rgba(0, 0, 0, 0.5);
+    height: 1000rpx;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+.camera{
+    display:flex;
+    justify-content: center;
+    background-color:white;
+    text-align: center;
+    height: 45px;
+    border: 1px solid  blanchedalmond;
+    align-items: center;
+}
+.alert{
+    margin-top: 975rpx;
+}

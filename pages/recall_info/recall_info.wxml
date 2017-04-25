@@ -1,0 +1,50 @@
+<view class="all_container">
+
+  <!--
+  <view class="top">
+    <view class="contain0">
+      <image src="{{back}}" class="img1" mode="widthFix" bindtap="return"></image>
+    </view>
+    <view class="contain1">记忆详情</view>
+    <view class="contain2"></view>
+  </view>-->
+
+  <!--<view class="userinfo">-->
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{data_club_recall.image}}" background-size="cover"></image>
+  </view>
+  <view class="tiltle">
+
+    <!--<view class="xing-img">
+      <image src="{{xing}}" class="img2" mode="widthFix" style="width:60rpx;"></image>
+    </view>-->
+    <view style="text-align:center" class="bds">{{data_club_recall.topic}}</view>
+  </view>
+
+  <!-- time -->
+  <view class="tiltle">
+
+    <!--<view class="xing-img">
+      <image src="{{leaf}}" class="img2" mode="widthFix" style="width:60rpx;"></image>
+    </view>-->
+    <view class="bds">
+      <view style="text-align:center" class="weui-input">{{data_club_recall.time}}</view>
+    </view>
+  </view>
+
+  <!-- intro -->
+  <view>
+    <view class="left-side">
+      <view class="left">记忆详情</view>
+    </view>
+    <view class="textarea">{{data_club_recall.intro}}</view>
+  </view>
+  <view class="left-side">
+    <view class="left">记忆图片</view>
+  </view>
+  <view class="activity">
+    <view wx:for="{{data_club_recall.images}}" wx:if="{{index < 3}}" class="miniposter">
+      <image bindtap="previewImage" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item}}"></image>
+    </view>
+  </view>
+</view>

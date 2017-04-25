@@ -1,0 +1,7 @@
+<scroll-view scroll-y="true">
+  <view>
+    <navigator url="../announcement/announcement?id={{item.id}} " wx:for="{{manageClub}}">
+      <view>{{item.id}}</view>
+    </navigator>
+  </view>
+</scroll-view>

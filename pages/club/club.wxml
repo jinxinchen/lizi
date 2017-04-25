@@ -1,0 +1,127 @@
+<view class="all_container">
+
+  <!--滑块-->
+
+  <!--<view class="swiper-tab">
+  <view class="swiper-tab-list1">
+    <image src="{{message}}" mode="widthFix" style="width: 50rpx"></image>
+  </view>
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">社团</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">活动</view>
+  <view class="swiper-tab-list1">
+    <image src="{{search}}" mode="widthFix" style="width: 50rpx"></image>
+  </view>
+</view>-->
+
+  <!--内容-->
+
+  <!--<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <swiper-item>-->
+  <view class="mark">
+    <view class="column">
+      <image src="{{column}}" style="width: 10rpx;height: 50rpx;"></image>
+    </view>
+    <text class="text">标签分类</text>
+  </view>
+  <view class="choice">
+    <view class="one">
+      <view class="style" bindtap="show1" wx:if="{{bol1}}">学术科技</view>
+      <view class="stylex" bindtap="show1" wx:if="{{!bol1}}">学术科技</view>
+      <view class="style" bindtap="show2" wx:if="{{bol2}}">志愿服务</view>
+      <view class="stylex" bindtap="show2" wx:if="{{!bol2}}">志愿服务</view>
+    </view>
+    <view class="one">
+      <view class="style" bindtap="show3" wx:if="{{bol3}}">社会实践</view>
+      <view class="stylex" bindtap="show3" wx:if="{{!bol3}}">社会实践</view>
+      <view class="style" bindtap="show4" wx:if="{{bol4}}">学生组织</view>
+      <view class="stylex" bindtap="show4" wx:if="{{!bol4}}">学生组织</view>
+    </view>
+    <view class="one">
+      <view class="style" bindtap="show5" wx:if="{{bol5}}">文化艺术</view>
+      <view class="stylex" bindtap="show5" wx:if="{{!bol5}}">文化艺术</view>
+      <view class="style" bindtap="show6" wx:if="{{bol6}}">体育娱乐</view>
+      <view class="stylex" bindtap="show6" wx:if="{{!bol6}}">体育娱乐</view>
+    </view>
+  </view>
+  <view class="mark">
+    <view class="column">
+      <image src="{{column}}" style="width: 10rpx;height: 50rpx;"></image>
+    </view>
+    <text class="text">热门推荐</text>
+  </view>
+
+  <!-- 社团列表 -->
+  <view wx:if="{{all.status == 1201}}" style="text-align:center">
+    <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img.lizi123.cn/Uploads/2016-09-25/1474780687_434262.jpg" mode="widthFix" style="width:200rpx"></image>
+    <view style="color: grey;font-size: 26rpx;text-align: center;">暂无相关社团</view>
+  </view>
+  <view wx:for="{{all}}">
+    <navigator url="../club_message/club_message?club_id={{item.id}}&club_name={{item.name}}" wx:if="{{item.id}}">
+      <view class="option">
+        <view class="headimage">
+          <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+        </view>
+        <view class="name">
+          <view class="clubname">{{item.name}}</view>
+          <view class="people">
+            <view class="peopleimage">
+              <image src="{{people}}" mode="widthFix" style="width: 30rpx"></image>
+            </view>
+            <view class="number">{{item.member_num}}人 已加入</view>
+          </view>
+        </view>
+        <view class="introduction">
+          <image src="{{more}}" mode="widthFix" style="width: 60rpx"></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <!--</swiper-item>
+  <swiper-item>
+        
+    <scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">
+      <view wx:for="{{hotact}}" wx:if="{{item.user_id}}">
+       
+            <navigator url="../club_manageactivity_concret/club_manageactivity_concret?id={{item.id}}">
+        <view class="white">
+          <view class="all">
+            <image class="background" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+          </view>
+          <view>
+            <view class="create">
+              <view class="create_">{{item.name}}</view>
+              
+            </view>
+            <view class="kind_mes">
+              <view class="display">
+                <view class="img_mar">
+                  <image src="http://wxapp1.b0.upaiyun.com/yzl/img/time.png" mode="widthFix" style="width:35rpx"></image>
+                </view>
+                <view class="font">{{item.act_starting}}
+                </view>
+              </view>
+              <view class="display">
+                <view class="img_mar">
+                  <image src="http://wxapp1.b0.upaiyun.com/yzl/img/location.png" mode="widthFix" style="width:35rpx"></image>
+                </view>
+                <view class="font">{{item.address}}
+                </view>
+              </view>
+              <view class="display">
+                <view class="img_mar">
+                  <image src="http://wxapp1.b0.upaiyun.com/yzl/img/mes.png" mode="widthFix" style="width:35rpx"></image>
+                </view>
+                <view class="font">{{item.intro}}</view>
+              </view>
+            </view>
+          </view>
+          </view>
+          <view class="back_all"></view>
+    
+        </navigator>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>-->
+</view>

@@ -1,0 +1,282 @@
+<view class="all_container">
+
+  <!--<view class="top">
+    <image src="{{back}}" id="img1" bindtap="return"></image>
+    <view class="contain1">社团详情</view>-->
+
+  <!--<navigator url="../club_editmessage/club_editmessage">
+  <view class="contain1" >编辑</view>
+  </navigator>-->
+
+  <!--</view>-->
+  <view class="poster">
+    <image src="{{background}}" style="width: 750rpx;height: 460rpx;"></image>
+  </view>
+  <view class="icon">
+    <view class="margin" bindtap="my_club">
+      <navigator url="../club_announcement/club_announcement?id={{club_id}}">
+        <view>
+          <image class="icon_first" src="{{icon_first}}"></image>
+        </view>
+        <view class="icon_club">发公告</view>
+      </navigator>
+    </view>
+    <view class="margin">
+      <navigator url="../club_manage__publishactivity/club_manage__publishactivity">
+        <view>
+          <image class="icon_first" src="{{icon_second}}"></image>
+        </view>
+        <view class="icon_club">创活动</view>
+      </navigator>
+    </view>
+    <view class="margin">
+      <navigator url="../recall_edit/recall_edit">
+        <view>
+          <image class="icon_first" src="{{icon_third}}"></image>
+        </view>
+        <view class="icon_club">发记忆</view>
+      </navigator>
+    </view>
+    <view class="margin">
+      <navigator url="../club_apply/club_apply">
+        <view>
+          <image class="icon_first" src="{{icon_fourth}}"></image>
+        </view>
+        <view class="icon_club">审申请</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="weui-tab">
+    <view class="weui-navbar" style="background:orange">
+      <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+
+      <!-- 社团印象 -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view>
+          <view class="title">
+            <image src="{{column}}" class="column"></image>
+            <view class="front">社团活动</view>
+            <view wx:if="{{club_activity==0}}">
+              <view class="after">0个</view>
+            </view>
+            <view class="after" wx:else>{{club_activity.length}}个></view>
+          </view>
+          <view class="activity">
+            <view wx:if="{{item.activity_id}}" wx:for="{{club_activity}}" class="miniposter">
+              <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.album_picture}}"bindtap="toActivity" data-info="{{item}}"></image>
+            </view>
+          </view>
+        </view>
+        <view>
+          <view class="title">
+            <image src="{{column}}" class="column"></image>
+            <view class="front">社团成员</view>
+            <view wx:if="{{club_people==0}}">
+              <view class="after">0人</view>
+            </view>
+            <view class="after" wx:else>{{club_people.length}}人></view>
+
+            <!--<view>
+              <image src="{{more}}" mode="widthFix" style="width:40rpx;padding-top:20rpx;"></image>
+            </view>-->
+          </view>
+          <view class="member">
+            <view class="one" wx:if="{{item.id}}" wx:for="{{club_people}}">
+              <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.head_image}}"></image>
+            </view>
+          </view>
+        </view>
+        <view>
+          <view class="title">
+            <image src="{{column}}" class="column"></image>
+            <view class="front">社团简介</view>
+            <view class="after">></view>
+          </view>
+          <view class="introduction">{{all.intro}}</view>
+        </view>
+      </view>
+
+      <!-- 社团活动 -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+
+        <!--middle-->
+
+        <!--<scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">-->
+        <view wx:for="{{hotact}}" wx:if="{{item.user_id}}">
+
+          <!--<block wx:if="{{item.area}}">-->
+          <navigator url="../club_manageactivity_concret/club_manageactivity_concret?id={{item.id}}">
+            <view class="white">
+              <view class="all">
+                <image class="background" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+              </view>
+              <view>
+                <view class="create">
+                  <view class="create_">{{item.name}}</view>
+
+                  <!--<view class="find">查看活动详情页</view>-->
+                </view>
+                <view class="kind_mes">
+                  <view class="display">
+                    <view class="img_mar">
+                      <image src="http://wxapp1.b0.upaiyun.com/yzl/img/time.png" mode="widthFix" style="width:35rpx"></image>
+                    </view>
+                    <view class="font">{{item.act_starting}}
+                    </view>
+                  </view>
+                  <view class="display">
+                    <view class="img_mar">
+                      <image src="http://wxapp1.b0.upaiyun.com/yzl/img/location.png" mode="widthFix" style="width:35rpx"></image>
+                    </view>
+                    <view class="font">{{item.address}}
+                    </view>
+                  </view>
+                  <view class="display">
+                    <view class="img_mar">
+                      <image src="http://wxapp1.b0.upaiyun.com/yzl/img/mes.png" mode="widthFix" style="width:35rpx"></image>
+                    </view>
+                    <view class="font">{{item.intro}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="back_all"></view>
+          </navigator>
+
+          <!--</block>-->
+        </view>
+
+        <!--</scroll-view>-->
+      </view>
+
+      <!-- 社团记忆 -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <view  wx:if="{{data_record[0].id == null}}"  style="text-align:center">
+          <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img.lizi123.cn/Uploads/2016-09-25/1474780687_434262.jpg" mode="widthFix" style="width:200rpx"></image>
+        <view style="color: grey;font-size: 26rpx;text-align: center;">暂无社团记忆</view>
+        </view>
+
+        <!-- 顶部 -->
+        <view wx:if="{{data_record[0].id != null}}" class="top_image">
+          <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/22_function_club/topCircle.png"></image>
+        </view>
+
+        <!-- for -->
+        <view wx:for="{{data_record}}" wx:if="{{item.id}}">
+
+          <!-- 左图右字 -->
+          <view wx:if="{{index % 2 == 0}}" class="left">
+
+            <!--图-->
+            <view class="left_1">
+              <view class="left_1_1">
+                <navigator url="../club_manage/club_manage?recall_id={{item.id}}" redirect="true">
+                  <image class="delete_image " src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png "></image>
+                </navigator>
+              </view>
+              <navigator url="../recall_info/recall_info?recall_id={{item.id}}&club_id={{item.club_id}}">
+                <image class="left_1_2 show_img" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+              </navigator>
+              <view class="left_1_3">
+                <view class="left_1_3_1"></view>
+              </view>
+            </view>
+
+            <!--字-->
+            <view class="left_2">
+
+              <!--<view>{{item.intro}}</view>
+        <view>{{item.time}}</view>
+        <view>{{item.topic}}</view>-->
+              <view class="left_2_01" wx:if="{{index-1 > 0}}">{{data_record[index-1].topic}}</view>
+              <view class="left_2_02" wx:if="{{index-1 > 0}}">{{data_record[index-1].time}}</view>
+              <view class="left_2_03" wx:if="{{index-1 > 0}}">{{data_record[index-1].intro}}</view>
+            </view>
+          </view>
+
+          <!-- 左字右图 -->
+          <view wx:if="{{index % 2 == 1}}" class="right">
+
+            <!-- 字 -->
+            <view class="right_1">
+              <view class="right_1_01" wx:if="{{index-1 > -1}}">{{data_record[index-1].topic}}</view>
+              <view class="right_1_02" wx:if="{{index-1 > -1}}">{{data_record[index-1].time}}</view>
+              <view class="right_1_03" wx:if="{{index-1 > -1}}">{{data_record[index-1].intro}}</view>
+            </view>
+
+            <!-- 图 -->
+            <view class="right_2">
+              <view class="right_2_1">
+                <view class="right_2_1_1"></view>
+              </view>
+              <navigator url="../recall_info/recall_info?recall_id={{item.id}}&club_id={{item.club_id}}">
+                <image class="right_2_2 show_img" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+              </navigator>
+              <view class="right_2_3">
+                <navigator url="../club_manage/club_manage?recall_id={{item.id}}" redirect="true">
+                  <image class="delete_image " src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png "></image>
+                </navigator>
+              </view>
+            </view>
+          </view>
+
+          <!-- end -->
+        </view>
+
+        <!-- end for -->
+
+        <!-- 左图右字 -->
+        <view wx:if="{{data_record.length % 2 == 0}}" class="left">
+
+          <!--图-->
+          <view class="left_1">
+            <view></view>
+          </view>
+
+          <!--字-->
+          <view class="left_2">
+            <view class="left_2_01">{{data_record[data_record.length-1].topic}}</view>
+            <view class="left_2_02">{{data_record[data_record.length-1].time}}</view>
+            <view class="left_2_03">{{data_record[data_record.length-1].intro}}</view>
+          </view>
+        </view>
+
+        <!-- 左字右图 -->
+        <view wx:if="{{data_record.length % 2 == 1}}" class="right">
+
+          <!-- 字 -->
+          <view class="right_1">
+            <view class="right_1_01">{{data_record[data_record.length-1].topic}}</view>
+            <view class="right_1_02">{{data_record[data_record.length-1].time}}</view>
+            <view class="right_1_03">{{data_record[data_record.length-1].intro}}</view>
+          </view>
+
+          <!-- 图 -->
+          <view class="right_2">
+            <view></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--内容-->
+
+  <!--<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+<swiper-item>
+</swiper-item> 
+<swiper-item>
+    
+</swiper-item> 
+<swiper-item>
+    
+</swiper-item>
+</swiper> -->
+</view>

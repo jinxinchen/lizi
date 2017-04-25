@@ -1,0 +1,77 @@
+.top {
+  background-color: orange;
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /*display:flex表示弹性布局*/
+}
+
+.contain1 {
+  padding-top: 16rpx;
+  padding-left: 245rpx;
+  color: white;
+}
+
+.contain2 {
+  padding-top: 30rpx;
+  padding-left: 136px;
+}
+
+#img1 {
+  height: 60rpx;
+  width: 60rpx;
+  padding-top: 14rpx;
+}
+
+
+#head_img {
+  border-radius: 50%;
+  height: 100rpx;
+  width: 100rpx;
+   margin:19rpx 25rpx;
+}
+.headimg{
+  flex: 1;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 4rpx  #eaeaea solid;
+}
+.column{
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  margin-top: 19rpx;
+}
+
+.name{
+  flex: 2;
+
+  text-align: left;
+  line-height: 80rpx
+}
+.style{
+  flex: 1;
+  font-size:24rpx;
+  color:dimgray;
+  text-align: left;
+  line-height: 30rpx
+}
+
+
+.check{
+  flex: 2;
+  border: 2rpx solid orange;
+  border-radius: 20rpx;
+  width:80rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  margin-top: 45rpx;
+  text-align: center;
+  color: orange;
+  padding-bottom: 7rpx;
+  font-size: 26rpx;
+  line-height: 50rpx
+}

@@ -1,0 +1,102 @@
+/* pages/club_creat__step3/club_creat__step3.wxss */
+
+.title {
+  display: inline-flex;
+  height: 80rpx;
+  width: 100%;
+  background-color: orange;
+}
+
+
+.invite {
+  margin-top: 20rpx;
+  color: white;
+  font-size: 35rpx;
+  width: 250rpx;
+}
+
+.conform {
+  margin-top: 20rpx;
+  margin-left: 50%;
+  margin-right: 8rpx;
+  width: 80rpx;
+  color: white;
+  font-size: 30rpx;
+  border: 1px solid white;
+  border-radius: 25rpx;
+  height: 34rpx;
+     text-align: center;
+}
+.searchimg{
+  width: 30rpx;
+}
+.return{
+    width: 60rpx;
+    margin-top:10rpx;
+    text-align: center;
+}
+
+
+.top_search{
+  display: -webkit-flex;
+}
+.search {
+  flex:8;
+  display: inline-flex;
+  height: 50rpx;
+  line-height: 50rpx;
+  border: 1px solid darkgray;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.input {
+  font-size: 30rpx;
+  color: darkgray;
+}
+.next {
+  flex:2;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: white;
+  border: 3rpx solid orange;
+  border-radius: 10rpx;
+  width: 100rpx;
+  height: 50rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  margin-top:10rpx;
+  background: orange;
+}
+.nextbutton{
+  line-height: 50rpx;
+}
+.recent_people{
+  height: 40rpx;
+  width: 100%;
+  background-color: gainsboro;
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  color: darkgray;
+  display: flex;
+  align-items: center;
+}
+.message{
+  display: inline-flex;
+  border-bottom: 4rpx solid gainsboro;
+  width: 100%;
+  align-items: center;
+  height: 60rpx;
+  padding-left: 8rpx;
+}
+.image_p{
+  height: 50rpx;
+  width: 50rpx;
+  margin-right:20rpx;
+  display: flex;
+  align-items: center;
+}
+.textz{
+  color: darkgray;
+}

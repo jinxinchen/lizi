@@ -1,0 +1,6 @@
+.head_page{
+    height: 300rpx;
+    width: 100rpx;
+    background-color: orange;
+    margin-bottom:10px;
+}

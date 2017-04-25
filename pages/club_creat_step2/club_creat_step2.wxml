@@ -1,0 +1,41 @@
+<view class="all_container">
+
+  <!--title-->
+
+  <!--<view class="title">
+     <view bindtap="return" class="return">
+     <image  src="{{back}}" mode="widthFix" style="width:60rpx"></image>
+    </view>
+  <view class="invite">邀请联系人</view>
+  <view class="conform">确认</view>
+</view>-->
+
+  <!--search-->
+  <view class="top_search">
+    <view class="search">
+      <view class="searchimg">
+        <image src="{{search}}" mode="widthFix" style="width:30rpx"></image>
+      </view>
+      <view class="input">
+        <input placeholder="搜索" />
+      </view>
+    </view>
+    <view class="next" bindtap="next_step">
+      <navigator url="../club_creat_step2/club_creat_step2">
+        <view class="nextbutton">完成</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="recent_people">
+    最近联系人
+  </view>
+  <view class="message" wx:for="{{userinfo}}">
+    <view>
+      <checkbox></checkbox>
+    </view>
+    <view>
+      <image class="image_p" src="{{item.user_info.head_image}}"></image>
+    </view>
+    <view class="textz">{{item.user_info.user_name}}</view>
+  </view>
+</view>

@@ -1,0 +1,70 @@
+<form bindsubmit="publicRecall">
+
+  <!--<view class="top">
+    <view class="contain0">
+      <image src="{{back}}" class="img1" mode="widthFix" bindtap="return"></image>
+    </view>
+    <view class="contain1">社团记忆</view>
+    <view class="contain2"></view>
+  </view>-->
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{image}}" bindtap="choose_image"></image>
+  </view>
+
+  <!-- topic -->
+  <view class="tiltle">
+    <view class="xing-img">
+      <image src="{{xing}}" class="img2" mode="widthFix" style="width:60rpx;"></image>
+    </view>
+    <view class="bd">
+      <input class="input" placeholder="标题" name="topic" />
+    </view>
+  </view>
+
+  <!-- time -->
+  <view class="tiltle">
+    <view class="xing-img">
+      <image src="{{leaf}}" class="img2" mode="widthFix" style="width:60rpx;"></image>
+    </view>
+    <view class="bds">
+      <picker mode="date" class=" times" value="{{time}}" start="2017-01-01" end="2100-01-01" bindchange="bindTimeChange">
+        <view class="weui-input">{{time}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- intro -->
+  <view>
+    <view class="left-side">活动详情</view>
+    <textarea class="textarea" placeholder="说说你们的活动记忆吧..." style="height: 200rpx" name="intro" />
+  </view>
+
+  <!-- images -->
+  <view class="page__bd">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <view class="weui-uploader__title left-side">更多图片</view>
+            <view class="weui-uploader__info">{{images.length}}/9</view>
+          </view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{src}}" wx:key="{{index}}">
+                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                </view>
+              </block>
+              <view wx:if="{{images.length < 9}}" class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="choose_from"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- button -->
+  <button bindtap="publicRecall" hover-class="btn" class="button" type="default" formType="submit">发布</button>
+</form>

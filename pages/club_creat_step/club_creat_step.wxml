@@ -1,0 +1,101 @@
+<view class="all_container">
+
+  <!--title-->
+
+  <!--<view class="title">
+  <view class="tab_top">
+    <view class="return" bindtap="return">
+        <image src="{{back}}" mode="widthFix" style="width:60rpx"></image>
+    </view>
+    <view class="club_message">社团基本信息</view>
+    <view class="next" bindtap="next_step">
+      <navigator url="../club_creat_step2/club_creat_step2">下一步</navigator>
+    </view>
+  </view>
+</view>-->
+
+  <!--body-->
+  <view>
+    <view class="head">
+      <view bindtap="uploadImage">
+        <image class="border" src="{{img}}"></image>
+      </view>
+    </view>
+    <view class="upload">点击上传社团头像</view>
+
+
+<form bindsubmit="complete">
+    <view class="input">
+      <input name="club_name" class="input_border" placeholder="填写社团名称" placeholder-class="string" />
+    </view>
+    <view class="choose" bindtap="choose">
+      已选类别:
+      <view class="display_kind">
+        <view>{{choose_fir}}</view>
+        <view>-</view>
+        <view>{{choose_two}}</view>
+      </view>
+    </view>
+    <view class="next" >
+    
+      <!--<navigator url="../club_creat_step2/club_creat_step2">-->
+      <!--<view class="nextbutton" >完成</view>-->
+        <button class="nextbutton" formType="submit">完成</button>
+      <!--</navigator>-->
+    </view>
+</form>
+
+
+    <view class="click">
+      <view class="click_next">点击[完成]代表你已阅读并同意</view>
+      <view class="user">用户使用协议</view>
+    </view>
+    
+  </view>
+  <view class="choose_type" wx:if="{{view}}">
+    <view class="choose_detail">
+      <image src="{{column}}" class="column"></image>
+      <text>选择社团属性</text>
+      <view class="choice">
+        <view class="one">
+          <view class="style" bindtap="show7" wx:if="{{bol7}}">{{xiaoji}}</view>
+          <view class="stylex" bindtap="show7" wx:if="{{!bol7}}">{{xiaoji}}</view>
+        </view>
+        <view class="one">
+          <view class="style" bindtap="show8" wx:if="{{bol8}}">{{yuanji}}</view>
+          <view class="stylex" bindtap="show8" wx:if="{{!bol8}}">{{yuanji}}</view>
+        </view>
+        <view class="one">
+          <view class="style" bindtap="show9" wx:if="{{bol9}}">{{xingqu}}</view>
+          <view class="stylex" bindtap="show9" wx:if="{{!bol9}}">{{xingqu}}</view>
+        </view>
+      </view>
+      <image src="{{column}}" class="column"></image>
+      <text>选择社团分类</text>
+      <view class="choice">
+        <view class="one">
+          <view class="style" bindtap="show1" wx:if="{{bol1}}">{{xueshu}}</view>
+          <view class="stylex" bindtap="show1" wx:if="{{!bol1}}">{{xueshu}}</view>
+          <view class="style" bindtap="show2" wx:if="{{bol2}}">{{zhiyuan}}</view>
+          <view class="stylex" bindtap="show2" wx:if="{{!bol2}}">{{zhiyuan}}</view>
+        </view>
+        <view class="one">
+          <view class="style" bindtap="show3" wx:if="{{bol3}}">{{shehui}}</view>
+          <view class="stylex" bindtap="show3" wx:if="{{!bol3}}">{{shehui}}</view>
+          <view class="style" bindtap="show4" wx:if="{{bol4}}">{{xuesheng}}</view>
+          <view class="stylex" bindtap="show4" wx:if="{{!bol4}}">{{xuesheng}}</view>
+        </view>
+        <view class="one">
+          <view class="style" bindtap="show5" wx:if="{{bol5}}">{{wenhua}}</view>
+          <view class="stylex" bindtap="show5" wx:if="{{!bol5}}">{{wenhua}}</view>
+          <view class="style" bindtap="show6" wx:if="{{bol6}}">{{tiyu}}</view>
+          <view class="stylex" bindtap="show6" wx:if="{{!bol6}}">{{tiyu}}</view>
+        </view>
+      </view>
+      <view class="confirm">
+        <view class="ok" bindtap="cancel">取消</view>
+        <view class="no" bindtap="confirm">确定</view>
+      </view>
+    </view>
+  </view>
+</view>
