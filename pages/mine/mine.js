@@ -22,15 +22,6 @@ Page({
 
     });
   },
-  my_club: function () {
-    console.log(1);
-    wx.navigateTo({
-      url: '../my_club/my_club',
-      success: function (res) {
-        // success
-      }
-    })
-  },
   onLoad: function (options) {
     var that = this;
     app.getUserInfo(function (userInfo) {
