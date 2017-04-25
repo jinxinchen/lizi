@@ -18,9 +18,9 @@ Page({
     more: 'http://wxapp1.b0.upaiyun.com/yzl/img/more.png',
     zan: 'http://wxapp1.b0.upaiyun.com/yzl/img/zan.png',
     aboutPic: [],
-    aboutActivityId:[],
-    toActivityId:0,
-    toActivityName:""
+    aboutActivityId: [],
+    toActivityId: 0,
+    toActivityName: ""
   },
   onLoad: function (option) {
     console.log(option)
@@ -54,7 +54,7 @@ Page({
         console.log("******")
         console.log(res);
         that.setData({
-          aboutActivityId:res.data.activity_recommend
+          aboutActivityId: res.data.activity_recommend
         })
         that.setData({
           info: res.data
@@ -95,7 +95,7 @@ Page({
 
   },
   /** 
-   * 点击tab切换 
+   * 点击tab切 
    */
   swichNav: function (e) {
 
@@ -121,7 +121,7 @@ Page({
       header: { 'content-type': 'application/x-www-form-urlencoded' },
       method: 'POST',
       success: function (res) {
-        
+
         if (that.data.i <= res.data.activity_recommend.length - 3) {
           that.data.aboutPic.splice(0, 3);
           that.setData({ aboutPic: that.data.aboutPic });
@@ -143,24 +143,24 @@ Page({
   },
 
   toActicity: function (e) {
-    var that=this;
+    var that = this;
     this.setData({
-      toActivityId:e.target.dataset.activityid.activity_id,
-      toActivityName:e.target.dataset.activityid.activity_name
+      toActivityId: e.target.dataset.activityid.activity_id,
+      toActivityName: e.target.dataset.activityid.activity_name
     })
-      wx.redirectTo({
-        url: '../club_manageactivity_concret/club_manageactivity_concret?id='+that.data.toActivityId+'&name='+that.data.toActivityName,
-        success: function(res){
-          // success
-          console.log('success')
-        },
-        fail: function() {
-          // fail
-        },
-        complete: function() {
-          // complete
-        }
-      })
-     
+    wx.redirectTo({
+      url: '../club_manageactivity_concret/club_manageactivity_concret?id=' + that.data.toActivityId + '&name=' + that.data.toActivityName,
+      success: function (res) {
+        // success
+        console.log('success')
+      },
+      fail: function () {
+        // fail
+      },
+      complete: function () {
+        // complete
+      }
+    })
+
   }
 })
