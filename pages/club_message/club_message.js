@@ -78,69 +78,75 @@ Page({
       success: function (res) {
         // success
       }
-    })
-    wx.request({
-      url: 'https://api.lizi123.cn/index.php/home/Club/clubImpress',
-      data: {
-        'client_type': 0,
-        'club_id': that.data.club_id,
-      },
-      header: { 'content-type': 'application/x-www-form-urlencoded' },
-      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      success: function (res) {
-        that.setData({ all: res.data });
-        that.setData({
-          club_activity: res.data.activity_image,
-          club_people: res.data.member
-        });
-        console.log(that.data.club_activity)
-        wx.request({
-          url: 'https://api.lizi123.cn/index.php/home/club/clubRecall',
-          data: {
-            "client_type": 0,
-            "club_id": that.data.club_id,
-          },
-          method: 'POST',
-          header: {
-            'content-type': 'application/x-www-form-urlencoded'
-          },
-          success: function (res) {
-            // success
-            that.setData({
-              data_record: res.data
-            })
-            console.log(that.data.data_record)
-          },
-          fail: function () {
-            // fail
-          },
-          complete: function () {
-            // complete
-          }
-        })
+    }),
+      wx.showToast({
+        title: '加载中',
+        icon: 'loading',
+        duration: 1500
+      }),
+      wx.request({
+        url: 'https://api.lizi123.cn/index.php/home/Club/clubImpress',
+        data: {
+          'client_type': 0,
+          'club_id': that.data.club_id,
+        },
+        header: { 'content-type': 'application/x-www-form-urlencoded' },
+        method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        success: function (res) {
+          that.setData({ all: res.data });
+          that.setData({
+            background: res.data.head,
+            club_activity: res.data.activity_image,
+            club_people: res.data.member
+          });
+          console.log(that.data.club_activity)
+          wx.request({
+            url: 'https://api.lizi123.cn/index.php/home/club/clubRecall',
+            data: {
+              "client_type": 0,
+              "club_id": that.data.club_id,
+            },
+            method: 'POST',
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            success: function (res) {
+              // success
+              that.setData({
+                data_record: res.data
+              })
+              console.log(that.data.data_record)
+            },
+            fail: function () {
+              // fail
+            },
+            complete: function () {
+              // complete
+            }
+          })
 
-      },
-      fail: function () {
-        // fail
-      },
-      complete: function () {
-        // complete
-      }
-    })
+        },
+        fail: function () {
+          // fail
+        },
+        complete: function () {
+          // complete
+        }
+      })
   },
   toActivity: function (e) {
     console.log(e)
     var toActivityId = e.target.dataset.info.activity_id;
     var toActivityName = e.target.dataset.info.activity_name
     wx.redirectTo({
-      url: '../club_manageactivity_concret/club_manageactivity_concret?id='+toActivityId+'&name='+toActivityName,
-      success: function(res){
+      url: '../club_manageactivity_concret/club_manageactivity_concret?id=' + toActivityId + '&name=' + toActivityName,
+      success: function (res) {
         // success
       },
-      fail: function() {
+      fail: function () {
         // fail
       },
-      complete: function() {
+      complete: function () {
         // complete
       }
     })
@@ -169,6 +175,12 @@ Page({
   toMine: function () {
     wx.switchTab({//返回有tabbar的页面
       url: '../mine/mine'
+    })
+  },
+  To_act: function () {
+    var that = this;
+    wx.navigateTo({//返回有tabbar的页面
+      url: '../club_act/club_act?id=' + that.data.club_id + '&name=' + that.data.club_name
     })
   },
   onShow: function () {

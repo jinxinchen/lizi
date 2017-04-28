@@ -10,6 +10,7 @@
     "pages/recall_edit/recall_edit",
     "pages/recall_show/recall_show",
     "pages/recall_info/recall_info",
+    "pages/club_act/club_act",
     "pages/club_manageactivity/club_manageactivity",
     "pages/club_manageactivity_concret/club_manageactivity_concret",
     "pages/club_join_manage/club_join_manage",
@@ -31,9 +32,9 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "grey",
+    "color": "#C1C1C1",
     "selectedColor": "#FFA500",
-    "backgroundColor": "white",
+    "backgroundColor": "#FFFFFF",
     "list": [
       {
         "pagePath": "pages/index/index",

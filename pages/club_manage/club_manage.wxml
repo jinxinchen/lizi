@@ -10,7 +10,7 @@
 
   <!--</view>-->
   <view class="poster">
-    <image src="{{background}}" style="width: 750rpx;height: 460rpx;"></image>
+    <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{background}}" style="width: 750rpx;height: 460rpx;"></image>
   </view>
   <view class="icon">
     <view class="margin" bindtap="my_club">
@@ -66,7 +66,7 @@
             <view wx:if="{{club_activity==0}}">
               <view class="after">0个</view>
             </view>
-            <view class="after" wx:else>{{club_activity.length}}个></view>
+            <view class="after" bindtap="To_act" wx:else>{{club_activity.length}}个></view>
           </view>
           <view class="activity">
             <view wx:if="{{item.activity_id}}" wx:for="{{club_activity}}" class="miniposter">
@@ -112,7 +112,7 @@
         <view wx:for="{{hotact}}" wx:if="{{item.user_id}}">
 
           <!--<block wx:if="{{item.area}}">-->
-          <navigator url="../club_manageactivity_concret/club_manageactivity_concret?id={{item.id}}">
+          <navigator url="../club_manageactivity_concret/club_manageactivity_concret?id={{item.id}}&name={{item.name}}">
             <view class="white">
               <view class="all">
                 <image class="background" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>

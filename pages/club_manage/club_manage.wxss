@@ -442,6 +442,7 @@
     flex: 1;
     font-size: 30rpx;
     margin-left: 10rpx;
+    text-align: left;
 }
 .find{
     flex: 1;

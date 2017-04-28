@@ -22,6 +22,15 @@ Page({
 
     });
   },
+  my_club: function () {
+    console.log(1);
+    wx.navigateTo({
+      url: '../my_club/my_club',
+      success: function (res) {
+        // success
+      }
+    })
+  },
   onLoad: function (options) {
     var that = this;
     app.getUserInfo(function (userInfo) {
@@ -39,7 +48,12 @@ Page({
           'lat': res.latitude
         })
       }
-    })
+    }),
+    wx.showToast({
+        title: '加载中',
+        icon: 'loading',
+        duration: 1000
+      }),
     wx.request({
       url: 'https://api.lizi123.cn/index.php/home/index/getLocation',
       data: {

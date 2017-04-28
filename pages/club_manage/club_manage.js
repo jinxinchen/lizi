@@ -80,7 +80,12 @@ Page({
     var that = this;
 
     if (e.recall_id !== null) {
-      console.log(e.recall_id)
+      console.log(e.recall_id),
+    wx.showToast({
+        title: '加载中',
+        icon: 'loading',
+        duration: 1500
+      }),
       wx.request({
         url: 'https://api.lizi123.cn/index.php/home/club/deleteRecall',
         data: {
@@ -159,8 +164,8 @@ Page({
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       success: function (res) {
         console.log(res)
-        that.setData({ all: res.data });
         that.setData({
+          background:res.data.head,
           club_activity: res.data.activity_image,
           club_people: res.data.member
         });
@@ -198,6 +203,12 @@ Page({
       }
     })
 
+  },
+  To_act: function () {
+    var that = this;
+    wx.navigateTo({//返回有tabbar的页面
+      url: '../club_act/club_act?id=' + that.data.club_id + '&name=' + that.data.club_name
+    })
   },
 
   /* 滑动切换tab */

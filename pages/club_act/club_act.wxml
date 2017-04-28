@@ -1,0 +1,18 @@
+<view class="all_container">
+  <view wx:for="{{info}}">
+    <view wx:if="{{item.id}}">
+      <view>
+        <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.head_image}}"></image>
+        <view>{{item.sponsor}}</view>
+      </view>
+      <view>
+        <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+        <view>{{item.name}}</view>
+        <view>活动状态 {{item.activity_status}}</view>
+        <view>活动简介 {{item.intro}}</view>
+        <view>活动地点 {{item.address}}</view>
+        <view>活动时间 {{item.activity_time}}</view>
+      </view>
+    </view>
+  </view>
+</view>

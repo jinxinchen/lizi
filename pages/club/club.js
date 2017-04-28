@@ -80,7 +80,12 @@ Page({
           winHeight: res.windowHeight
         });
       }
-    });
+    }),
+    wx.showToast({
+        title: '加载中',
+        icon: 'loading',
+        duration: 1200
+      }),
     that.setData({
       bol1: true,
       bol2: true,

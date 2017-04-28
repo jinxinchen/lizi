@@ -46,7 +46,7 @@
       <scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">
         <view wx:for="{{joinClub}}">
           <view wx:if="{{item.id}}">
-            <navigator url="../club_message/club_message?club_id={{item.id}}">
+            <navigator url="../club_message/club_message?club_id={{item.id}}&club_name={{item.name}}">
               <view class="option">
                 <view class="headimage">
                   <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>

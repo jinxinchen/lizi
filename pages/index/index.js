@@ -40,7 +40,12 @@ Page({
           'lat' : res.latitude
         })
       }
-    })
+    }),
+    wx.showToast({
+        title: '加载中',
+        icon: 'loading',
+        duration: 2200
+      }),
     wx.request({
       url: 'https://api.lizi123.cn/index.php/home/index/bannerTabs',
       data: {'client_type':0},
