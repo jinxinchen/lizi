@@ -1,0 +1,40 @@
+.item_1{
+    height: 450rpx;
+}
+.head_logo{
+    height: 80rpx;
+    width: 80rpx;
+    float: left;
+    margin:20rpx;
+}
+.head{
+    font-family: "微软雅黑";
+    font-size: 30rpx;
+    height: 120rpx;
+}
+.head_title{
+    padding-top: 15rpx;
+}
+.act_image{
+    height: 400rpx;
+    width:300rpx;
+    float: left;
+    padding-bottom: 50rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+.act_title{
+    font-family: "微软雅黑";
+    font-size: 30rpx;
+    font-weight: bold;
+    padding-bottom: 10rpx;
+}
+.act_content{
+    font-family: "微软雅黑";
+    font-size: 25rpx;
+    padding-left: 20rpx;
+}
+.apart{
+    height: 10rpx;
+    background: #fafafa;
+}

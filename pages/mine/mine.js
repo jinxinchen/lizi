@@ -52,7 +52,8 @@ Page({
     wx.showToast({
         title: '加载中',
         icon: 'loading',
-        duration: 1000
+        duration: 1000,
+     
       }),
     wx.request({
       url: 'https://api.lizi123.cn/index.php/home/index/getLocation',
@@ -93,6 +94,20 @@ Page({
     that.setData({
       'addname':app.globalData.address
     })
+
+
+
+
+
+
+
+
+      bbb
+
+
+
+  gdd
+      
   }
   // getlocation: function (e) {
   //   var that = this;

@@ -19,19 +19,19 @@
 
 .contain0 {
   flex: 1;
-  margin-top:20rpx;
+  margin-top: 20rpx;
 }
 
 .contain1 {
   padding-top: 9rpx;
   flex: 8;
-
   justify-content: center;
   color: white;
   line-height: 90rpx;
 }
-.name{
-  padding-left:260rpx;
+
+.name {
+  padding-left: 260rpx;
 }
 
 .contain2 {
@@ -39,7 +39,7 @@
   justify-content: center;
   color: white;
   flex: 1;
-  font-size:26rpx;
+  font-size: 26rpx;
   line-height: 90rpx;
 }
 
@@ -64,8 +64,8 @@
   width: 80rpx;
   border-radius: 50%;
   margin-top: 10rpx;
-  border:3rpx solid orange;
-  float: left
+  border: 3rpx solid orange;
+  float: left;
 }
 
 /*.h {
@@ -80,14 +80,15 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-left:30rpx;
-  padding-top: 10rpx 
+  padding-left: 30rpx;
+  padding-top: 10rpx;
 }
-.detail{
-  
+
+.detail {
   padding-top: 20rpx;
-  padding-left:110rpx
+  padding-left: 110rpx;
 }
+
 .a {
   width: 8rpx;
   height: 50rpx;
@@ -101,20 +102,22 @@
   color: #777;
   text-align: left;
 }
-.sign{
+
+.sign {
   width: 30rpx;
   height: 30rpx;
   margin-right: 20rpx;
 }
-.club_name{
+
+.club_name {
   font-size: 30rpx;
   font-weight: bold;
-  color: black
+  color: black;
 }
 
 .ownItro {
   font-size: 25rpx;
-  color:black;
+  color: black;
   text-align: left;
 }
 
@@ -139,7 +142,7 @@
   border-radius: 50%;
   margin-top: 10rpx;
   margin-left: 10rpx;
-  border:3rpx solid orange;
+  border: 3rpx solid orange;
 }
 
 .morePic {
@@ -229,12 +232,17 @@
 
 .swiper-tab-list {
   display: inline-block;
-  width: 33.33%;
+  width: 50%;
   color: white;
+}
+
+.swichNavs {
+  width: 50%;
 }
 
 .on {
   color: white;
+  left: 0rpx;
   border-bottom: 5rpx solid white;
 }
 
@@ -260,8 +268,50 @@
 .zanend {
   color: white;
 }
-.text{
- color: grey;
- font-size: 26rpx; 
- text-align: center;
+
+.text {
+  color: grey;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.foot {
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.footer{
+  height: 90rpx;
+  display: flex;
+  direction: row;
+}
+
+.footer_join {
+  display: block;
+  background-color: #ffc040;
+  text-align: center;
+  color: #fff;
+  flex: 2;
+}
+
+.footer_like {
+  display: block;
+  background-color: #fff;
+  flex: 1;
+}
+
+.ico_like{
+  width: 70rpx;
+  height: 60rpx;
+}
+
+.footer_colect {
+  display: block;
+  background-color: #fff;
+  flex: 1;
+}
+
+.ico_colect{
+  width: 70rpx;
+  height: 60rpx;
 }

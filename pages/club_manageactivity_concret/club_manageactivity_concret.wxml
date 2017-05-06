@@ -4,15 +4,13 @@
   </view>
   <view class="swiper-tab">
     <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">详情</view>
-    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">进展</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">进展</view>
   </view>
   <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
 
     <!-- 社团详情 -->
     <swiper-item>
-      
-        <image wx:if="{{info.club_info}}" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{info.club_info.image}}" class="ownPic"></image>
-      
+      <image wx:if="{{info.club_info}}" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{info.club_info.image}}" class="ownPic"></image>
       <view class="itmes">
         <text class="ownItros club_name">{{info.club_info.name}}</text>
         <text class="ownItros">{{info.club_info.sign}}</text>
@@ -58,14 +56,6 @@
       </view>
     </swiper-item>
 
-    <!-- 活动花絮 -->
-    <swiper-item>
-      <view style="text-align:center">
-        <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img.lizi123.cn/Uploads/2016-09-25/1474780687_434262.jpg" mode="widthFix" style="width:200rpx"></image>
-      </view>
-      <view style="color: grey;font-size: 26rpx;text-align: center;">该活动暂无花絮</view>
-    </swiper-item>
-
     <!-- 活动进展 -->
     <swiper-item>
       <view style="text-align:center">
@@ -74,4 +64,17 @@
       <view class="text">该活动暂无进展</view>
     </swiper-item>
   </swiper>
+</view>
+
+<!-- 底部 -->
+<view class="foot">
+  <view class="footer" style="width:{{winWidth}}px">
+    <view class="footer_join">报名参加</view>
+    <view class="footer_like">
+    <image class="ico_like" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/ic_big_good.png"></image>
+    </view>
+    <view class="footer_colect">
+    <image class="ico_colect" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/ic_like.png"></image>
+    </view>
+  </view>
 </view>

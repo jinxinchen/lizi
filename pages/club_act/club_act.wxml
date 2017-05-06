@@ -1,18 +1,21 @@
 <view class="all_container">
   <view wx:for="{{info}}">
     <view wx:if="{{item.id}}">
-      <view>
-        <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.head_image}}"></image>
-        <view>{{item.sponsor}}</view>
+      <view class="head">
+        <image class="head_logo" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.head_image}}"></image>
+        <view class="head_title">{{item.sponsor}}</view>
       </view>
-      <view>
-        <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
-        <view>{{item.name}}</view>
-        <view>活动状态 {{item.activity_status}}</view>
-        <view>活动简介 {{item.intro}}</view>
-        <view>活动地点 {{item.address}}</view>
-        <view>活动时间 {{item.activity_time}}</view>
+      <view class="item_1">
+        <image class="act_image" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+        <view class="act_title">{{item.name}}</view>
+        <view class="act_content">
+          <view>活动状态  {{item.activity_status}}</view>
+          <view>活动简介  {{item.intro}}</view>
+          <view>活动地点  {{item.address}}</view>
+          <view>活动时间  {{item.activity_time}}</view>
+        </view>
       </view>
+      <view class="apart"></view>
     </view>
   </view>
 </view>
