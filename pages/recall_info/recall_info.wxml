@@ -42,9 +42,8 @@
   <view class="left-side">
     <view class="left">记忆图片</view>
   </view>
-  <view class="activity">
-    <view wx:for="{{data_club_recall.images}}" wx:if="{{index < 3}}" class="miniposter">
-      <image bindtap="previewImage" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item}}"></image>
-    </view>
-  </view>
+  
+      <image wx:for="{{data_club_recall.images}}" bindtap="previewImage" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item}}" class="picList" style="width:{{ImagewWidth}}px;height:{{ImagewWidth}}px;"></image>
+    
+  
 </view>

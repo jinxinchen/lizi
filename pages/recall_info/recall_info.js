@@ -35,6 +35,7 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         var Width = res.windowWidth / 3;
+        Width = Width-5;
         console.log(Width)
         that.setData({
           ImagewWidth: Width

@@ -13,7 +13,7 @@
   <!--icon-->
   <view class="bg">
     <view class="icon">
-      <view class="margin" bindtap="my_club">
+      <view class="margin">
         <navigator url="../club_join_manage/club_join_manage">
           <view>
             <image class="icon_first" src="{{icon_first}}"></image>

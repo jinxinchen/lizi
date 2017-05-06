@@ -69,7 +69,7 @@
 <!-- 底部 -->
 <view class="foot">
   <view class="footer" style="width:{{winWidth}}px">
-    <view class="footer_join">报名参加</view>
+    <view class="footer_join"><text style="line-height:90rpx;">报名参加</text></view>
     <view class="footer_like">
     <image class="ico_like" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/2_function/23_function_sports/ic_big_good.png"></image>
     </view>

@@ -89,12 +89,6 @@
 .left{
   margin-left:10rpx;
 }
-.activity{
-    padding-left: 10rpx;
-    padding-right:10rpx;
-    display: -webkit-flex;
-    text-align: center;
-}
 .miniposter{
     flex: 1;
     /*display: -webkit-flex;*/
@@ -106,4 +100,7 @@
     width: 220rpx;
     height: 300rpx;
     margin-left:20rpx;
+}
+.picList{
+  padding:5rpx 5rpx;
 }

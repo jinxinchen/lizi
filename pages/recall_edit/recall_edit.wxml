@@ -1,12 +1,4 @@
 <form bindsubmit="publicRecall">
-
-  <!--<view class="top">
-    <view class="contain0">
-      <image src="{{back}}" class="img1" mode="widthFix" bindtap="return"></image>
-    </view>
-    <view class="contain1">社团记忆</view>
-    <view class="contain2"></view>
-  </view>-->
   <view class="userinfo">
     <image class="userinfo-avatar" src="{{image}}" bindtap="choose_image"></image>
   </view>
@@ -46,7 +38,7 @@
         <view class="weui-uploader">
           <view class="weui-uploader__hd">
             <view class="weui-uploader__title left-side">更多图片</view>
-            <view class="weui-uploader__info">{{images.length}}/9</view>
+            <view class="weui-uploader__info">{{src.length}}/9</view>
           </view>
           <view class="weui-uploader__bd">
             <view class="weui-uploader__files" id="uploaderFiles">

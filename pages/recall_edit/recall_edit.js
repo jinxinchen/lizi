@@ -17,14 +17,12 @@ Page({
         images_url: [],
         image: ['http://wxapp1.b0.upaiyun.com/yzl/img/add.png'],
         images: [],
-        src: [
-        ],
+        src: [],
         back: 'http://wxapp1.b0.upaiyun.com/yzl/img/back.png',
         xing: 'http://wxapp1.b0.upaiyun.com/yzl/img/star.png',
         leaf: 'http://wxapp1.b0.upaiyun.com/yzl/img/leaf.png'
     },
     return: function () {
-        console.log(0)
         wx.navigateBack({
             delta: 1, // 回退前 delta(默认为1) 页面
             success: function (res) {
@@ -38,43 +36,7 @@ Page({
             }
         })
     },
-
-    choose_images: function () {
-        var that = this;
-        wx.chooseImage({
-            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-            success: function (res) {
-                // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-                that.setData({
-                    images: that.data.images.concat(res.tempFilePaths),
-                    // image: res.tempFilePaths
-                });
-                console.log(that.data.images)
-                wx.uploadFile({
-                    url: 'https://api.lizi123.cn/index.php/home/index/uploads',
-                    filePath: res.tempFilePaths[0],
-                    name: 'name',
-                    header: {
-                        'content-type': 'multipart/form-data'
-                    },
-                    success: function (res) {
-                        console.log(res)
-                        var obj = JSON.parse(res.data)
-                        that.setData({
-                            images_url: that.data.images_url.concat(obj.url)
-                        })
-                    },
-                    fail: function () {
-                        // fail
-                    },
-                    complete: function () {
-                        // complete
-                    }
-                })
-            }
-        })
-    },
+    //选择社团头像
     choose_image: function () {
         var that = this;
         wx.chooseImage({
@@ -87,13 +49,12 @@ Page({
                 that.setData({
                     image: tempFilePaths
                 });
+                console.log("头像是：");
                 console.log(that.data.image);
             }
 
         })
     },
-
-
     cancel: function () {
         // console.log("asd");
         this.setData({
@@ -106,6 +67,8 @@ Page({
             view: true
         })
     },
+
+    //更多图片
     choose_from: function () {
 
         // if(src_mine.length==0)
@@ -118,23 +81,12 @@ Page({
             sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
             sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
             success: function (res) {
-                if (src_mine.length != 0) {
-                    src_mine.pop();
-                }
                 tempFilePaths = res.tempFilePaths;
-                // console.log("res" + res);
                 console.log(111)
                 console.log(tempFilePaths);
-                // console.log(tempFilePaths.length); //返回图片路径个数
                 src_mine = src_mine.concat(tempFilePaths);
-                
-
-                // for (var i = 0; i < tempFilePaths.length; i++) {
-
-                // }
                 that.setData({
                     image_z: tempFilePaths.length,
-                    // src: tempFilePaths[0],
                     src: src_mine
 
                 });
@@ -145,7 +97,6 @@ Page({
                 that.UpLoadDIY(successup, failup, k, length);
             }
         });
-        // console.log("zz");
 
     },
 
@@ -225,13 +176,13 @@ Page({
 
         } else if (that.data.intro == "") {
             wx.showToast({
-                icon: "loading",
+                icon: "wrong",
                 title: "记忆介绍不能为空哦...",
                 duration: 1000
             })
-        } else if (that.data.images_url.length == 0) {
+        } else if (that.data.src.length == 0) {
             wx.showToast({
-                icon: "loading",
+                icon: "wrong",
                 title: "记忆照片不能为空哦...",
                 duration: 2000
             })

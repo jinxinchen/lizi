@@ -287,7 +287,6 @@
 }
 
 .footer_join {
-  display: block;
   background-color: #ffc040;
   text-align: center;
   color: #fff;
