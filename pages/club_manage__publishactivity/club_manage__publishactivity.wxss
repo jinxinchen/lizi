@@ -111,14 +111,7 @@
 
     display: inline-flex;
 }
-.float{
-    background-color:rgba(0, 0, 0, 0.5);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-}
+
 .camera{
     display:flex;
     justify-content: center;
@@ -268,14 +261,17 @@ font-size: 26rpx;
     padding-top: 10rpx;
 }
 .mid_float{
-    width: 50%;
-    height: 30%;
+     position: fixed;
+    width: 60%;
+    height: 34%;
     background-color: white;
-    margin-left: 25%;
-    margin-top: 170rpx;
+    margin-left: 20%;
+    margin-top: 300rpx;
 }
 .radio_group{
-    padding-top:20rpx;
+    padding-top:30rpx;
+    margin-left:15rpx;
+    margin-right:15rpx;
 }
 .tag{
     display: inline-flex;
@@ -287,7 +283,7 @@ font-size: 26rpx;
     font-size: 26rpx;
 }
 .radio{
-    font-size: 24rpx;
+    font-size: 26rpx;
      color: 2rpx solid #FFBF2C;
 }
 .left{
@@ -311,16 +307,18 @@ font-size: 26rpx;
     flex: 1;
     line-height: 60rpx;
     color: rgb(255, 200, 70);
-    text-align: right;
+    text-align: center;
     margin-right: 10rpx;
+    margin-top:15rpx;
 }
 .conr{
     flex: 1;
     
     line-height: 60rpx;
     color: rgb(255, 200, 70);
-    text-align: left;
+    text-align: center;
     margin-left: 10rpx;
+    margin-top:15rpx;
 }
 .tap{
     color: rgb(255, 200, 70);

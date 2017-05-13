@@ -1,44 +1,44 @@
 <view>
-<form bindsubmit="publicRecall">
-  <!--<view class="top">
+  <form bindsubmit="publicRecall">
+
+    <!--<view class="top">
     <view class="contain0">
       <image src="{{back}}" class="img1" mode="widthFix" bindtap="return"></image>
     </view>
     <view class="contain1">社团记忆</view>
     <view class="contain2"></view>
   </view>-->
-  <view class="userinfo">
-    <image class="userinfo-avatar" src="{{image}}" bindtap="choose_image"></image>
-  </view>
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{image}}" bindtap="choose_image"></image>
+    </view>
 
-  <!-- topic -->
+    <!-- topic -->
 
-  <!--<view class="weui-input">
+    <!--<view class="weui-input">
     <input class="weui-input" type="text" placeholder="请输入标题" name="topic"></input>
   </view>-->
-  <view class="tiltle">
-    <view class="xing-img">
-      <image src="{{xing}}" class="img2" mode="widthFix" style="width:60rpx;"></image>
+    <view class="tiltle">
+      <view class="xing-img">
+        <image src="{{xing}}" class="img2" mode="widthFix" style="width:60rpx;"></image>
+      </view>
+      <view class="bd">
+        <input class="input" placeholder="标题" name="title" />
+      </view>
     </view>
-    <view class="bd">
-      <input  class="input" placeholder="标题" name="title" />
-    </view>
-  </view>
 
-
- 
-<!--tag-->
-   <view class="tiltle">
-    <view class="xing-img">
-      <image src="{{leaf}}" class="img2" mode="widthFix" style="width:60rpx;"></image>
+    <!--tag-->
+    <view class="tiltle">
+      <view class="xing-img">
+        <image src="{{leaf}}" class="img2" mode="widthFix" style="width:60rpx;"></image>
+      </view>
+      <view class="bd">
+        <button class="choose_kind" bindtap="choose_splite">活动分类：{{button_start}}</button>
+      </view>
     </view>
-    <view class="bd">
-     <button class="choose_kind" bindtap="choose_splite">活动分类：{{button_start}}</button>
-    </view>
-  </view>
 
-  <!-- time -->
-  <!--<view class="tiltle">
+    <!-- time -->
+
+    <!--<view class="tiltle">
     <view class="xing-img">
       <image src="{{leaf}}" class="img2" mode="widthFix" style="width:60rpx;"></image>
     </view>
@@ -49,17 +49,15 @@
     </view>
   </view>-->
 
-  <!-- intro -->
+    <!-- intro -->
+    <view>
+      <view class="left-side">活动详情</view>
+      <input name="desc" readonly="{{disable}}"   class="textarea" placeholder="{{saysome}}" style="height: 200rpx"  />
+    </view>
 
-  <view>
-    <view class="left-side">活动详情</view>
-    <textarea name="desc"  disabled="{{disable}}" class="textarea" placeholder="{{saysome}}" style="height: 200rpx"  />
-  </view>
+    <!-- images -->
 
- 
-
-  <!-- images -->
-  <!--<view class="secend">
+    <!--<view class="secend">
     <view class="left-side">活动照片</view>
     <view class="info">{{image_z}}/1</view>
   </view>
@@ -68,51 +66,46 @@
       <image src="{{item}}" class="add_img"></image>
     </view>
   </view>-->
-  <!-- button -->
 
-
-
-<button hover-class="btn" class="button" type="default" formType="submit">发布</button>
-</form>
-
-<view class="float" wx:if="{{view1}}">
-      <view class="mid_float">
-        <radio-group bindchange="radioChange" class="radio_group">
-          <view class="tag">
-            <view class="left" hover-class="tap">
-              <radio class="radio" value="赛事">赛事</radio>
-            </view>
-            <view class="left">
-              <radio class="radio" value="演出">演出</radio>
-            </view>
+    <!-- button -->
+    <button hover-class="btn" class="button" type="default" formType="submit">发布</button>
+  </form>
+  <view class="float" wx:if="{{view1}}">
+    <view class="mid_float">
+      <radio-group bindchange="radioChange" class="radio_group">
+        <view class="tag">
+          <view class="left" hover-class="tap">
+            <radio class="radio" value="赛事">赛事</radio>
           </view>
-          <view class="tag">
-            <view class="left">
-              <radio class="radio" value="学习">学习</radio>
-            </view>
-            <view class="left">
-              <radio class="radio" value="招聘">招聘</radio>
-            </view>
+          <view class="left">
+            <radio class="radio" value="演出">演出</radio>
           </view>
-          <view class="tag">
-            <view class="left">
-              <radio class="radio" value="公益">公益</radio>
-            </view>
-            <view class="left">
-              <radio class="radio" value="娱乐">娱乐</radio>
-            </view>
+        </view>
+        <view class="tag">
+          <view class="left">
+            <radio class="radio" value="学习">学习</radio>
           </view>
-          <view class="tag">
-            <view class="conl" bindtap="quxiao">
-              确认
-            </view>
-            <view class="conr" bindtap="quxiao">
-              取消
-            </view>
+          <view class="left">
+            <radio class="radio" value="招聘">招聘</radio>
           </view>
-        </radio-group>
-      </view>
+        </view>
+        <view class="tag">
+          <view class="left">
+            <radio class="radio" value="公益">公益</radio>
+          </view>
+          <view class="left">
+            <radio class="radio" value="娱乐">娱乐</radio>
+          </view>
+        </view>
+        <view class="tag">
+          <view class="conl" bindtap="quxiao">
+            确认
+          </view>
+          <view class="conr" bindtap="quxiao">
+            取消
+          </view>
+        </view>
+      </radio-group>
     </view>
-
-
+  </view>
 </view>

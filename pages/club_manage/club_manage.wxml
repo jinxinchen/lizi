@@ -30,7 +30,7 @@
       </navigator>
     </view>
     <view class="margin">
-      <navigator url="../recall_edit/recall_edit">
+      <navigator url="../recall_edit/recall_edit?club_id={{club_id}}">
         <view>
           <image class="icon_first" src="{{icon_third}}"></image>
         </view>
@@ -70,7 +70,7 @@
           </view>
           <view class="activity">
             <view wx:if="{{item.activity_id}}" wx:for="{{club_activity}}" class="miniposter">
-              <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.album_picture}}"bindtap="toActivity" data-info="{{item}}"></image>
+              <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.album_picture}}" bindtap="toActivity" data-info="{{item}}"></image>
             </view>
           </view>
         </view>
@@ -105,19 +105,19 @@
 
       <!-- 社团活动 -->
       <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-
-        <!--middle-->
-
-        <!--<scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">-->
+       <view wx:if="{{hotact[0].id == null}}" style="text-align:center">
+          <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img.lizi123.cn/Uploads/2016-09-25/1474780687_434262.jpg" mode="widthFix" style="width:200rpx"></image>
+          <view style="color: grey;font-size: 26rpx;text-align: center;">暂无社团活动</view>
+        </view>
         <view wx:for="{{hotact}}" wx:if="{{item.user_id}}">
 
           <!--<block wx:if="{{item.area}}">-->
           <navigator url="../club_manageactivity_concret/club_manageactivity_concret?id={{item.id}}&name={{item.name}}">
             <view class="white">
-              <view class="all">
+              <view class="left_">
                 <image class="background" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
               </view>
-              <view>
+              <view class="right_">
                 <view class="create">
                   <view class="create_">{{item.name}}</view>
 
@@ -158,9 +158,9 @@
 
       <!-- 社团记忆 -->
       <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-        <view  wx:if="{{data_record[0].id == null}}"  style="text-align:center">
+        <view wx:if="{{data_record[0].id == null}}" style="text-align:center">
           <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img.lizi123.cn/Uploads/2016-09-25/1474780687_434262.jpg" mode="widthFix" style="width:200rpx"></image>
-        <view style="color: grey;font-size: 26rpx;text-align: center;">暂无社团记忆</view>
+          <view style="color: grey;font-size: 26rpx;text-align: center;">暂无社团记忆</view>
         </view>
 
         <!-- 顶部 -->
@@ -177,9 +177,9 @@
             <!--图-->
             <view class="left_1">
               <view class="left_1_1">
-                <navigator url="../club_manage/club_manage?recall_id={{item.id}}" redirect="true">
-                  <image class="delete_image " src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png "></image>
-                </navigator>
+                <!--<navigator url="../club_manage/club_manage?club_id={{club_id}}&club_name={{club_name}}&recall_id={{item.id}}" redirect="true">-->
+                  <image data-recall_id='{{item.id}}' bindtap="delete_recall" class="delete_image " src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png "></image>
+                <!--</navigator>-->
               </view>
               <navigator url="../recall_info/recall_info?recall_id={{item.id}}&club_id={{item.club_id}}">
                 <image class="left_1_2 show_img" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
@@ -220,9 +220,9 @@
                 <image class="right_2_2 show_img" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
               </navigator>
               <view class="right_2_3">
-                <navigator url="../club_manage/club_manage?recall_id={{item.id}}" redirect="true">
-                  <image class="delete_image " src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png "></image>
-                </navigator>
+                <!--<navigator url="../club_manage/club_manage?club_id={{club_id}}&club_name={{club_name}}&recall_id={{item.id}}" redirect="true">-->
+                  <image data-recall_id='{{item.id}}'  bindtap="delete_recall" class="delete_image " src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://lizi-img.oss-cn-shenzhen.aliyuncs.com/new_lizi/3_publish/34_publish_club/shanchu.png "></image>
+                <!--</navigator>-->
               </view>
             </view>
           </view>

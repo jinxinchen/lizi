@@ -94,20 +94,6 @@ Page({
     that.setData({
       'addname':app.globalData.address
     })
-
-
-
-
-
-
-
-
-      bbb
-
-
-
-  gdd
-      
   }
   // getlocation: function (e) {
   //   var that = this;

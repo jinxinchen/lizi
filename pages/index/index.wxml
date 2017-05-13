@@ -24,10 +24,10 @@
     <!--<block wx:if="{{item.area}}">-->
     <navigator url="../club_manageactivity_concret/club_manageactivity_concret?id={{item.id}}&name={{item.name}}">
       <view class="white">
-        <view class="all">
+        <view class="left_">
           <image class="background" mode="aspectFill" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
         </view>
-        <view>
+        <view class="right_">
           <view class="create">
             <view class="create_">{{item.name}}</view>
 

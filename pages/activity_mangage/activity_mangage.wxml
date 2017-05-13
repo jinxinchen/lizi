@@ -1,0 +1,122 @@
+<view class="all_container">
+
+  <!--<view class="top">
+    <image src="{{back}}" id="img1" bindtap="return"></image>
+    <view class="contain1">我的社团</view>
+  </view>-->
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">我的管理</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">我的加入</view>
+  </view>
+
+  <!--内容-->
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <swiper-item>
+
+      <!--我管理的-->
+      <scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">
+      <view  wx:if="{{manage_act[0].id == null}}"  style="text-align:center">
+          <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img.lizi123.cn/Uploads/2016-09-25/1474780687_434262.jpg" mode="widthFix" style="width:200rpx"></image>
+        <view style="color: grey;font-size: 26rpx;text-align: center;">暂未管理活动</view>
+        </view>
+        <view wx:for="{{manage_act}}" wx:if="{{item.id}}">
+          <view class="white">
+            <view class="left_">
+              <view>
+                  <image class="background" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+              </view>
+            </view>
+            <view class="right_">
+              <view class="create">
+                <view class="create_">{{item.name}}</view>
+                <view class="img_marign">
+                  <image bindtap="deletes" id="{{index}}" src="http://wxapp1.b0.upaiyun.com/yzl/img/delete.png" mode="widthFix" style="width:50rpx"></image>
+                </view>
+              </view>
+              <view class="kind_mes">
+                <view class="display">
+                  <view class="img_mar">
+                    <image src="http://wxapp1.b0.upaiyun.com/yzl/img/time.png" mode="widthFix" style="width:35rpx"></image>
+                  </view>
+                  <view class="font">{{item.activity_time}}
+                  </view>
+                  <view class="img_marign">
+                  <image bindtap="To_edit" data-id="{{item.id}}" src="http://wxapp1.b0.upaiyun.com/cjx/img/ic_edit.png" mode="widthFix" style="width:50rpx"></image>
+                </view>
+                </view>
+                <view class="display">
+                  <view class="img_mar">
+                    <image src="http://wxapp1.b0.upaiyun.com/yzl/img/location.png" mode="widthFix" style="width:35rpx"></image>
+                  </view>
+                  <view class="font">{{item.address}}
+                  </view>
+                </view>
+                <view class="display">
+                  <view class="img_mar">
+                    <image src="http://wxapp1.b0.upaiyun.com/yzl/img/mes.png" mode="widthFix" style="width:35rpx"></image>
+                  </view>
+                  <view class="font">{{item.requirements}}
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="back_all"></view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+
+      <!--我加入的-->
+      <scroll-view class="margin_view" style="height: 1100rpx;" scroll-y="true">
+      <view  wx:if="{{join_act[0].id == null}}"  style="text-align:center">
+          <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img.lizi123.cn/Uploads/2016-09-25/1474780687_434262.jpg" mode="widthFix" style="width:200rpx"></image>
+        <view style="color: grey;font-size: 26rpx;text-align: center;">暂未参加活动</view>
+        </view>
+        <view wx:for="{{join_act}}" wx:if="{{item.id}}">
+          <view class="white">
+            <view class="left_">
+              <view>
+                <navigator url="../club_manageactivity_concret/club_manageactivity_concret?id={{item.id}}&name={{item.name}}">
+                  <image class="background" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
+                </navigator>
+              </view>
+            </view>
+            <view class="right_">
+              <view class="create">
+                <view class="create_">{{item.name}}</view>
+                <view class="img_marign">
+                  <image bindtap="deletes" id="{{index}}" src="http://wxapp1.b0.upaiyun.com/yzl/img/delete.png" mode="widthFix" style="width:50rpx"></image>
+                </view>
+              </view>
+              <view class="kind_mes">
+                <view class="display">
+                  <view class="img_mar">
+                    <image src="http://wxapp1.b0.upaiyun.com/yzl/img/time.png" mode="widthFix" style="width:35rpx"></image>
+                  </view>
+                  <view class="font">{{item.activity_time}}
+                  </view>
+                </view>
+                <view class="display">
+                  <view class="img_mar">
+                    <image src="http://wxapp1.b0.upaiyun.com/yzl/img/location.png" mode="widthFix" style="width:35rpx"></image>
+                  </view>
+                  <view class="font">{{item.address}}
+                  </view>
+                </view>
+                <view class="display">
+                  <view class="img_mar">
+                    <image src="http://wxapp1.b0.upaiyun.com/yzl/img/mes.png" mode="widthFix" style="width:35rpx"></image>
+                  </view>
+                  <view class="font">{{item.requirements}}
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="back_all"></view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

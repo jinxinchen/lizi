@@ -1,0 +1,32 @@
+.title{
+    font-family: "微软雅黑";
+    color: #FFA500;
+    font-size: 30rpx;
+    float: left;
+    margin-right: 15rpx;
+    width: 150rpx;
+    text-align: center;
+}
+.input_content{
+    font-size: 30rpx;
+    border-bottom: 4rpx solid #FFA500;
+    font-family: "微软雅黑";
+}
+.form{
+    margin-top: 50rpx;
+    margin-left: 20rpx;
+    margin-right: 50rpx;
+}
+.content_bottom{
+    margin-top: 60rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx; 
+}
+.bottom{
+    border-radius: 50rpx;
+    background: #FFC107;
+    border:1rpx #fff solid;
+    font-family: "微软雅黑";
+    font-size: 35rpx;
+    color: #fff;
+}

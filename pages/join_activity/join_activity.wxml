@@ -1,0 +1,19 @@
+<view>
+  <view>
+    <view class="form">
+      <view class="title">真实姓名</view>
+      <input bindinput="inputname" placeholder="请填写您的真实姓名" class="input_content"/>
+    </view>
+    <view class="form">
+      <view class="title">手机</view>
+      <input bindinput="inputphone" placeholder="请填写您的手机号" class="input_content"/>
+    </view>
+    <view class="form">
+      <view class="title">学院专业</view>
+      <input bindinput="inputaddress" placeholder="请填写您的学院专业" class="input_content"/>
+    </view>
+  </view>
+  <view class="content_bottom">
+    <button bindtap="set" class="bottom">确认报名</button>
+  </view>
+</view>

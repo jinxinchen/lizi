@@ -1,0 +1,72 @@
+.title{
+    padding-left: 20rpx;
+    border-bottom: 1rpx solid #f5f5f5;
+    font-family: "微软雅黑";
+    font-size: 30rpx;
+    margin-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+.input{
+    font-family: '微软雅黑';
+    font-size: 30rpx;
+}
+.float_left{
+    float: left;
+}
+.blank{
+    height: 30rpx;
+    border-bottom: 1rpx solid #f5f5f5;
+    background: #fafafa;
+}
+.content{
+    font-family: "微软雅黑"; 
+    font-size: 30rpx;
+}
+.img{
+    width: 30rpx;
+    height: 30rpx;
+    float: left;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+}
+.title_s{
+    padding-right: 25rpx;
+}
+.content_s{
+    padding-top: 10rpx;
+    margin-left: 80rpx;
+    padding-bottom: 10rpx;
+    border-bottom: 1rpx solid #f5f5f5;
+    height: 55rpx;
+}
+.input_s{
+    float: left;
+    width: 400rpx;
+}
+.next_img{
+    float: right;
+    width: 15rpx;
+    height: 30rpx;
+    margin-top: 15rpx;
+    margin-right: 20rpx;
+}
+.detail{
+    margin-top: 20rpx;
+    margin-left: 80rpx;
+    margin-right: 20rpx;
+    border-bottom: 1rpx solid #f5f5f5;
+    height: 300rpx;
+}
+.content_b{
+    margin-top: 60rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx; 
+}
+.bottom{
+    border-radius: 50rpx;
+    background: #FFC107;
+    border:1rpx #fff solid;
+    font-family: "微软雅黑";
+    font-size: 35rpx;
+    color: #fff;
+}

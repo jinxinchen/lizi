@@ -1,0 +1,45 @@
+<view>
+  <view>
+    <view class="title">
+      <view class="float_left">标题：</view>
+      <view class="input">
+        <input bindinput="inputname" value="{{name}}" />
+      </view>
+    </view>
+    <view class="blank"></view>
+    <view class="content">
+      <image src="../../img/time.png" class="img"></image>
+      <view class="content_s"> 
+        <view class="float_left title_s">时间</view>
+        <input bindinput="inputtime" value="{{time}}" class="input_s"/>
+        <!--<image src="../../img/next.gif" class="next_img"></image>-->
+      </view>
+      <image src="../../img/time.png" class="img"></image>
+      <view class="content_s">
+        <view class="float_left title_s">类型</view>
+        <input bindinput="inputtype_id" value="{{type_id}}" />
+      </view>
+      <image src="../../img/time.png" class="img"></image>
+      <view class="content_s">
+        <view class="float_left title_s">标签</view>
+        <input bindinput="inputtag_name" value="{{tag_name}}"  />
+      </view>
+      <image src="../../img/time.png" class="img"></image>
+      <view class="content_s">
+        <view class="float_left title_s">报名地点</view>
+        <input bindinput="inputaddress" value="{{address}}" class="input_s"/>
+        <!--<image src="../../img/next.gif" class="next_img"></image>-->
+      </view>
+      <image src="../../img/time.png" class="img"></image>
+      <view class="content_s">
+        <view class="title_s">活动详情</view>
+      </view>
+      <view class="detail">
+        <input bindinput="inputintro" value="{{intro}}" />
+      </view>
+    </view>
+  </view>
+  <view class="content_b">
+    <button bindtap="set" class="bottom">完成</button>
+  </view>
+</view>

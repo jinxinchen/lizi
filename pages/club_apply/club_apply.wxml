@@ -3,7 +3,7 @@
     <image src="{{back}}" id="img1" bindtap="return"></image>
     <view class="contain1" style="text-align:center">申请入社</view>
   </view>-->
-  <view wx:if="{{all.num==0}}">
+  <view wx:if="{{all.apply.length==0}}">
     <view style="text-align:center">
       <image src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img.lizi123.cn/Uploads/2016-09-25/1474780687_434262.jpg" mode="widthFix" style="width:200rpx"></image>
     </view>

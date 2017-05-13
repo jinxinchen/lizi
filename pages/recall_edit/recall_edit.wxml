@@ -26,9 +26,13 @@
   </view>
 
   <!-- intro -->
-  <view>
-    <view class="left-side">活动详情</view>
-    <textarea class="textarea" placeholder="说说你们的活动记忆吧..." style="height: 200rpx" name="intro" />
+  <view class="page__bd">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader__title left-side">活动详情</view>
+        <textarea class="textarea" placeholder="说说你们的活动记忆吧..." style="height: 200rpx" name="intro" />
+      </view>
+    </view>
   </view>
 
   <!-- images -->

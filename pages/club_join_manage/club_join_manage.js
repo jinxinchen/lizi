@@ -52,13 +52,13 @@ Page({
     wx.showToast({
       title: '加载中',
       icon: 'loading',
-      duration: 1000
+      duration:1000
     }),
       wx.request({
         url: 'https://api.lizi123.cn/index.php/home/Club/manageClubList',
         data: {
           'client_type': 0,
-          'user_id': 1
+          'user_id':1
         },
         header: { 'content-type': 'application/x-www-form-urlencoded' },
         method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT

@@ -186,15 +186,17 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'https://api.lizi123.cn/index.php/home/club/wxgetHotActivity',
+      url: 'https://api.lizi123.cn/index.php/home/club/getClubAct',
       data: {
-        'client_type': 0
+        'client_type':0,
+        'club_id':that.data.club_id
       },
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
+        console.log(1111)
         console.log(res.data);
         that.setData({
           hotact: res.data

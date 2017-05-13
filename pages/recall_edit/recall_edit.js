@@ -261,6 +261,9 @@ Page({
                             title: "发布记忆成功",
                             duration: 3000
                         })
+                        that.setData({
+                            images:[]
+                        })
                         console.log(that.data)
                     },
                     fail: function () {

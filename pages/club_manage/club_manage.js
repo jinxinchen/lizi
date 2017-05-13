@@ -9,7 +9,7 @@ Page({
     // club_id:null,
     club_id: 1,
     // user_id:null,
-    user_id: 2,
+    user_id:1,
     data_record: null,     //社团记忆数据
     winWidth: 0,
     winHeight: 0,
@@ -78,57 +78,60 @@ Page({
 
   onLoad: function (e) {
     var that = this;
-
+    console.log("qqqqqqqqqqqqqqq")
+    console.log(that.data.user_id)
+            console.log(e.recall_id)
     if (e.recall_id !== null) {
       console.log(e.recall_id),
-    wx.showToast({
-        title: '加载中',
-        icon: 'loading',
-        duration: 1500
-      }),
-      wx.request({
-        url: 'https://api.lizi123.cn/index.php/home/club/deleteRecall',
-        data: {
-          "client_type": 0,
-          "user_id": that.data.user_id,
-          "recall_id": e.recall_id,
-        },
-        method: 'POST',
-        header: {
-          'content-type': 'application/x-www-form-urlencoded'
-        },
-        success: function (res) {
-        },
-        fail: function (res) {
-          // fail
-        },
-        complete: function (res) {
-          wx.request({
-            url: 'https://api.lizi123.cn/index.php/home/club/clubRecall',
-            data: {
-              "client_type": 0,
-              "club_id": that.data.club_id,
-            },
-            method: 'POST',
-            header: {
-              'content-type': 'application/x-www-form-urlencoded'
-            },
-            success: function (res) {
-              // success
-              that.setData({
-                data_record: res.data
-              })
-              console.log(that.data.data_record)
-            },
-            fail: function () {
-              // fail
-            },
-            complete: function () {
-              // complete
-            }
-          })
-        }
-      })
+        wx.showToast({
+          title: '加载中',
+          icon: 'loading',
+          duration: 1500
+        }),
+        wx.request({
+          url: 'https://api.lizi123.cn/index.php/home/club/deleteRecall',
+          data: {
+            "client_type": 0,
+            "user_id": that.data.user_id,
+            "recall_id": e.recall_id,
+          },
+          method: 'POST',
+          header: {
+            'content-type': 'application/x-www-form-urlencoded'
+          },
+          success: function (res) {
+            console.log(res)
+          },
+          fail: function (res) {
+            // fail
+          },
+          complete: function (res) {
+            wx.request({
+              url: 'https://api.lizi123.cn/index.php/home/club/clubRecall',
+              data: {
+                "client_type": 0,
+                "club_id": that.data.club_id,
+              },
+              method: 'POST',
+              header: {
+                'content-type': 'application/x-www-form-urlencoded'
+              },
+              success: function (res) {
+                // success
+                that.setData({
+                  data_record: res.data
+                })
+                console.log(that.data.data_record)
+              },
+              fail: function () {
+                // fail
+              },
+              complete: function () {
+                // complete
+              }
+            })
+          }
+        })
     } else {
       that.setData({
         club_id: e.club_id,
@@ -165,7 +168,7 @@ Page({
       success: function (res) {
         console.log(res)
         that.setData({
-          background:res.data.head,
+          background: res.data.head,
           club_activity: res.data.activity_image,
           club_people: res.data.member
         });
@@ -240,9 +243,10 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'https://api.lizi123.cn/index.php/home/club/wxgetHotActivity',
+      url: 'https://api.lizi123.cn/index.php/home/club/getClubAct',
       data: {
-        'client_type': 0
+        'client_type': 0,
+        'club_id':that.data.club_id
       },
       method: 'POST',
       header: {
@@ -261,14 +265,14 @@ Page({
     var toActivityId = e.target.dataset.info.activity_id;
     var toActivityName = e.target.dataset.info.activity_name
     wx.redirectTo({
-      url: '../club_manageactivity_concret/club_manageactivity_concret?id='+toActivityId+'&name='+toActivityName,
-      success: function(res){
+      url: '../club_manageactivity_concret/club_manageactivity_concret?id=' + toActivityId + '&name=' + toActivityName,
+      success: function (res) {
         // success
       },
-      fail: function() {
+      fail: function () {
         // fail
       },
-      complete: function() {
+      complete: function () {
         // complete
       }
     })
@@ -304,6 +308,21 @@ Page({
     // console.log(local);
     this.setData({
       data: local,
+    })
+  },
+  delete_recall: function (e) {
+    var that = this
+    var recall_id = e.currentTarget.dataset.recall_id
+    wx.showModal({
+      title: "提示",
+      content: "确定删除这条记忆吗",
+      success: function (e) {
+        if (e.confirm == true) {
+          wx.redirectTo({
+            url: '../club_manage/club_manage?club_id=' + that.data.club_id + '&club_name=' + that.data.club_name + '&recall_id= ' + recall_id,
+          })
+        }
+      }
     })
   }
 })

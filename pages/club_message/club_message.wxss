@@ -385,11 +385,12 @@
 }
 .white{
     background: white;
-    margin-top:10rpx;
+    margin-top:30rpx;
     margin-bottom: 10rpx;
     padding-left: 20rpx;
     padding-right: 20rpx;
-    padding-top: 10rpx;
+    display: -webkit-flex;
+    direction: column;
 }
 
 .return {
@@ -403,10 +404,9 @@
 
 .background {
   /*background-image: url({{http://wxapp1.b0.upaiyun.com/ljq/img/demo.jpg}});*/
-  width: 100%;
-  height: 400rpx;
+  width: 210rpx;
+  height: 300rpx;
   /*margin-top: 20rpx;*/
-  
 }
 .small_img{
     color: white;
@@ -456,11 +456,16 @@
     line-height: 40rpx;
 
 }
-.all{
+.left_{
+    flex:1;
     /*margin-top: 20rpx;*/
     margin-bottom: 10rpx;
     background-color: white;
 }
+.right_{
+    flex:2;
+}
+
 .back_all{
     height: 30rpx;
     width: 100%;

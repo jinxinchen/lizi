@@ -17,7 +17,7 @@
         <image class="background" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"></image>
         <view class="img_padding">
           <view class="img_marign">
-            <image src="http://wxapp1.b0.upaiyun.com/yzl/img/edit.png" mode="widthFix" style="width:50rpx"></image>
+            <image bindtap="To_edit" src="http://wxapp1.b0.upaiyun.com/yzl/img/edit.png" mode="widthFix" style="width:50rpx"></image>
           </view>
           <view class="img_marign">
             <image bindtap="deletes" id="{{index}}" src="http://wxapp1.b0.upaiyun.com/yzl/img/delete.png" mode="widthFix" style="width:50rpx"></image>

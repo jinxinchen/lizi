@@ -17,8 +17,6 @@ Page({
     locat: 'http://wxapp1.b0.upaiyun.com/yzl/img/locat.png',
     search: 'http://wxapp1.b0.upaiyun.com/yzl/img/search.png',
     message: 'http://wxapp1.b0.upaiyun.com/yzl/img/message.png',
-
-
     hotclub: "http://wxapp1.b0.upaiyun.com/yzl/img/hotclub.png",
     img: "http://wxapp1.b0.upaiyun.com/ljq/img/demo.jpg",
     time: "2016年7月8日",
